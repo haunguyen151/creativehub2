@@ -1,238 +1,265 @@
-import React, { useState, useEffect } from 'react';
-import { 
-  TrendingUp, 
-  Users, 
-  Eye, 
-  Video, 
-  Palette, 
-  BookOpen, 
-  Smartphone,
-  Award,
-  BarChart3,
-  Target
-} from 'lucide-react';
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Báo Cáo SMT - PNJ Creative Hub</title>
+    
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,600;0,700;1,600&family=Montserrat:wght@400;500;600;700&display=swap" rel="stylesheet">
+    
+    <!-- Lucide Icons -->
+    <script src="https://unpkg.com/lucide@latest"></script>
 
-const Dashboard = () => {
-  const [isVisible, setIsVisible] = useState(false);
-
-  useEffect(() => {
-    setIsVisible(true);
-  }, []);
-
-  // Màu sắc chủ đạo từ PNJ brand và báo cáo
-  const colors = {
-    red: '#9A161F',
-    gold: '#B8860B',
-    lightGold: '#F9F1E5',
-    cream: '#FCF9F2',
-    navy: '#003366',
-    darkText: '#2D3748'
-  };
-
-  const projects = [
-    {
-      id: 'zmp',
-      title: 'DỰ ÁN ZMP',
-      subtitle: 'Phát triển Khách Hàng Mới',
-      description: 'Giải pháp thu hút KHM out of store',
-      metrics: [
-        { label: 'Doanh thu', value: '9.4 Tỷ', icon: TrendingUp, color: 'text-red-700', isBig: true },
-        { label: 'Lượt truy cập', value: '127.467', icon: Eye, color: 'text-blue-800' },
-        { label: 'KHM Mới', value: '1.177', icon: Users, color: 'text-amber-600' }
-      ],
-      creativeOutput: {
-        title: 'Thiết kế full material cho campaign XTT Valentine',
-        items: [
-          '9 Visuals chính',
-          '9 Videos truyền thông',
-          '30 Artworks đa nền tảng',
-          '243 Bản Adaptation (Sub-brand/BST)'
-        ]
-      },
-      icon: Target
-    },
-    {
-      id: 'ebrochure',
-      title: 'E - BROCHURE',
-      subtitle: 'Tăng doanh thu hàng mới',
-      description: 'E-Catalog giới thiệu sản phẩm mới',
-      metrics: [
-        { label: 'Lượt truy cập', value: '21.539', icon: Eye, color: 'text-red-700', isBig: true },
-        { label: 'Sản phẩm mới ra mắt', value: '129', icon: Award, color: 'text-blue-800' },
-        { label: 'Tốc độ Go-to-market', value: 'Nhanh', icon: TrendingUp, color: 'text-amber-600' }
-      ],
-      creativeOutput: {
-        title: 'Thiết kế E-Catalog, đưa sản phẩm go to market',
-        items: [
-          'Thiết kế UI/UX 32 trang layout',
-          'Tối ưu hóa hình ảnh 129 mẫu hàng',
-          'Tương thích đa thiết bị (Mobile/Web)'
-        ]
-      },
-      icon: BookOpen
-    },
-    {
-      id: 'video',
-      title: 'THƯ VIỆN VIDEO',
-      subtitle: 'Tăng doanh thu hàng mới',
-      description: 'Công cụ hỗ trợ TVV tư vấn bán hàng',
-      metrics: [
-        { label: 'Lượt truy cập', value: '1.351', icon: Eye, color: 'text-red-700', isBig: true },
-        { label: 'TVV sử dụng', value: '615', icon: Users, color: 'text-blue-800' },
-        { label: 'Tỷ lệ tương tác', value: 'Cao', icon: BarChart3, color: 'text-amber-600' }
-      ],
-      creativeOutput: {
-        title: 'Quay dựng, thiết kế, sản xuất video hàng mới',
-        items: [
-          '394 Videos (Explainer & Review chi tiết)',
-          '6 Banners/Videos truyền thông',
-          'Kịch bản chốt sale cho từng sản phẩm'
-        ]
-      },
-      icon: Video
-    }
-  ];
-
-  return (
-    <div className="min-h-screen bg-[#FCF9F2] font-sans selection:bg-[#B8860B] selection:text-white pb-12">
-      {/* Import Fonts */}
-      <style dangerouslySetInnerHTML={{__html: `
-        @import url('https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,600;0,700;1,600&family=Montserrat:wght@400;500;600;700&display=swap');
+    <style>
         .font-serif-vi { font-family: 'Playfair Display', serif; }
         .font-sans-vi { font-family: 'Montserrat', sans-serif; }
         .glass-panel { background: rgba(255, 255, 255, 0.85); backdrop-filter: blur(10px); }
-      `}} />
-
-      {/* Top Navigation / Header */}
-      <nav className="bg-white shadow-sm px-4 md:px-6 py-3 md:py-4 flex justify-between items-center border-b-2 border-[#B8860B]">
-        <div className="flex items-center gap-2 md:gap-3">
-          <img 
-            src="logo_KHBL.jpg" 
-            alt="KHBL Logo" 
-            className="h-10 md:h-12 w-auto object-contain rounded-md"
-            onError={(e) => {
-              e.target.onerror = null; 
-              e.target.src = "https://placehold.co/100x40/003366/FFFFFF?text=KHBL";
-            }}
-          />
-          <div>
-            <h1 className="font-bold text-[#003366] text-sm md:text-lg tracking-wider">CREATIVE HUB</h1>
-            <p className="text-[10px] md:text-xs text-gray-500 uppercase tracking-widest">Supporting Center</p>
-          </div>
-        </div>
-        <div className="hidden md:flex items-center gap-2 text-sm text-[#9A161F] font-semibold bg-[#F9F1E5] px-4 py-2 rounded-full">
-          <Award size={16} />
-          <span>Báo cáo hiệu quả cộng hưởng Design</span>
-        </div>
-      </nav>
-
-      {/* Main Content */}
-      <main className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pt-8 md:pt-10">
         
-        {/* Header Section */}
-        <div className={`text-center mb-10 md:mb-14 transform transition-all duration-1000 ${isVisible ? 'translate-y-0 opacity-100' : 'translate-y-10 opacity-0'}`}>
-          <div className="relative inline-block mb-4 md:mb-6">
-            <h2 className="font-serif-vi text-4xl sm:text-5xl md:text-6xl lg:text-7xl text-[#9A161F] font-bold drop-shadow-lg relative z-10 px-2 leading-tight">
-              DỰ ÁN NỔI BẬT
-            </h2>
-            {/* Hiệu ứng bóng sáng dưới chữ */}
-            <div className="absolute -bottom-1 md:-bottom-2 left-[10%] right-[10%] h-3 md:h-4 bg-[#B8860B]/20 rounded-full blur-md -z-10"></div>
-          </div>
-          
-          <div className="flex items-center justify-center mb-6 px-2">
-            <div className="bg-gradient-to-r from-[#B8860B]/10 via-[#F9F1E5] to-[#B8860B]/10 px-6 md:px-10 py-3 md:py-4 rounded-[2rem] border border-[#B8860B]/40 shadow-sm max-w-full">
-              <p className="font-sans-vi text-[#9A161F] text-sm sm:text-base md:text-xl font-bold tracking-widest md:tracking-[0.2em] uppercase text-center leading-normal">
-                <span className="text-[#B8860B] hidden sm:inline mr-2">✦</span> 
-                XUÂN - VALENTINE - THẦN TÀI 
-                <span className="text-[#B8860B] hidden sm:inline ml-2">✦</span>
-              </p>
+        /* Animation Classes */
+        .fade-in-section {
+            opacity: 0;
+            transform: translateY(40px);
+            transition: opacity 1s ease-out, transform 1s ease-out;
+        }
+        .fade-in-section.is-visible {
+            opacity: 1;
+            transform: translateY(0);
+        }
+    </style>
+</head>
+<body class="min-h-screen bg-[#FCF9F2] font-sans selection:bg-[#B8860B] selection:text-white pb-12">
+
+    <!-- Top Navigation / Header -->
+    <nav class="bg-white shadow-sm px-4 md:px-6 py-3 md:py-4 flex justify-between items-center border-b-2 border-[#B8860B]">
+        <div class="flex items-center gap-2 md:gap-3">
+            <img 
+                src="logo_KHBL.jpg" 
+                alt="KHBL Logo" 
+                class="h-10 md:h-12 w-auto object-contain rounded-md"
+                onerror="this.onerror=null; this.src='https://placehold.co/100x40/003366/FFFFFF?text=KHBL';"
+            />
+            <div>
+                <h1 class="font-bold text-[#003366] text-sm md:text-lg tracking-wider">CREATIVE HUB</h1>
+                <p class="text-[10px] md:text-xs text-gray-500 uppercase tracking-widest">Supporting Center</p>
             </div>
-          </div>
-          
-          <p className="font-sans-vi text-gray-600 text-sm md:text-lg lg:text-xl max-w-3xl mx-auto px-4 leading-relaxed">
-            Báo cáo tổng kết hiệu quả <span className="font-semibold text-[#003366]">Tối ưu điểm chạm số</span> và <span className="font-semibold text-[#9A161F]">Thúc đẩy doanh thu</span> thông qua sức mạnh của thiết kế sáng tạo.
-          </p>
+        </div>
+        <div class="hidden md:flex items-center gap-2 text-sm text-[#9A161F] font-semibold bg-[#F9F1E5] px-4 py-2 rounded-full">
+            <i data-lucide="award" class="w-4 h-4"></i>
+            <span>Báo cáo hiệu quả cộng hưởng Design</span>
+        </div>
+    </nav>
+
+    <!-- Main Content -->
+    <main class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pt-8 md:pt-10">
+        
+        <!-- Header Section -->
+        <div class="fade-in-section text-center mb-10 md:mb-14" style="transition-delay: 100ms;">
+            <div class="relative inline-block mb-4 md:mb-6">
+                <h2 class="font-serif-vi text-4xl sm:text-5xl md:text-6xl lg:text-7xl text-[#9A161F] font-bold drop-shadow-lg relative z-10 px-2 leading-tight">
+                    DỰ ÁN NỔI BẬT
+                </h2>
+                <!-- Hiệu ứng bóng sáng dưới chữ -->
+                <div class="absolute -bottom-1 md:-bottom-2 left-[10%] right-[10%] h-3 md:h-4 bg-[#B8860B]/20 rounded-full blur-md -z-10"></div>
+            </div>
+            
+            <div class="flex items-center justify-center mb-6 px-2">
+                <div class="bg-gradient-to-r from-[#B8860B]/10 via-[#F9F1E5] to-[#B8860B]/10 px-6 md:px-10 py-3 md:py-4 rounded-[2rem] border border-[#B8860B]/40 shadow-sm max-w-full">
+                    <p class="font-sans-vi text-[#9A161F] text-sm sm:text-base md:text-xl font-bold tracking-widest md:tracking-[0.2em] uppercase text-center leading-normal">
+                        <span class="text-[#B8860B] hidden sm:inline mr-2">✦</span> 
+                        XUÂN - VALENTINE - THẦN TÀI 
+                        <span class="text-[#B8860B] hidden sm:inline ml-2">✦</span>
+                    </p>
+                </div>
+            </div>
+            
+            <p class="font-sans-vi text-gray-600 text-sm md:text-lg lg:text-xl max-w-3xl mx-auto px-4 leading-relaxed">
+                Báo cáo tổng kết hiệu quả <span class="font-semibold text-[#003366]">Tối ưu điểm chạm số</span> và <span class="font-semibold text-[#9A161F]">Thúc đẩy doanh thu</span> thông qua sức mạnh của thiết kế sáng tạo.
+            </p>
         </div>
 
-        {/* Project Cards Grid */}
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 md:gap-8 relative z-10">
-          {projects.map((project, index) => (
-            <div 
-              key={project.id} 
-              className={`glass-panel rounded-3xl overflow-hidden shadow-lg border border-gray-100 hover:shadow-2xl transition-all duration-500 transform hover:-translate-y-2 flex flex-col`}
-              style={{
-                transitionDelay: `${500 + (index * 200)}ms`,
-                opacity: isVisible ? 1 : 0,
-                transform: isVisible ? 'translateY(0)' : 'translateY(20px)'
-              }}
-            >
-              {/* Card Header */}
-              <div className="p-6 md:p-8 text-center relative overflow-hidden bg-gradient-to-b from-[#F9F1E5] to-white border-b border-amber-100/50">
-                <div className="absolute top-0 right-0 p-4 opacity-10">
-                  <project.icon size={100} className="md:w-[120px] md:h-[120px]" />
-                </div>
-                <h4 className="font-sans-vi text-[#003366] text-xs md:text-sm font-bold tracking-widest uppercase mb-2 md:mb-3">
-                  {project.subtitle}
-                </h4>
-                <div className="inline-block bg-[#9A161F] text-white px-5 md:px-6 py-2 rounded-full font-serif-vi font-bold text-lg md:text-2xl shadow-md mb-3 md:mb-4 relative z-10">
-                  {project.title}
-                </div>
-                <p className="text-gray-600 font-medium italic relative z-10 text-sm md:text-base">
-                  {project.description}
-                </p>
-              </div>
-
-              {/* Card Business Metrics (For SMT) */}
-              <div className="p-6 bg-white flex-grow">
-                <h5 className="text-xs font-bold text-gray-400 uppercase tracking-widest mb-4 text-center">Hiệu Quả Kinh Doanh</h5>
-                <div className="grid grid-cols-1 gap-4">
-                  {project.metrics.map((metric, i) => (
-                    <div key={i} className={`flex items-center justify-between p-3 rounded-xl ${metric.isBig ? 'bg-red-50 border border-red-100' : 'bg-gray-50'}`}>
-                      <div className="flex items-center gap-3">
-                        <metric.icon size={18} className={metric.color} />
-                        <span className="text-gray-600 text-sm font-medium">{metric.label}</span>
-                      </div>
-                      <span className={`font-bold ${metric.isBig ? 'text-2xl text-[#9A161F]' : 'text-lg text-gray-800'}`}>
-                        {metric.value}
-                      </span>
+        <!-- Project Cards Grid -->
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 md:gap-8 relative z-10">
+            
+            <!-- Card 1: Dự Án ZMP -->
+            <div class="fade-in-section glass-panel rounded-3xl overflow-hidden shadow-lg border border-gray-100 hover:shadow-2xl transition-all duration-500 transform hover:-translate-y-2 flex flex-col" style="transition-delay: 300ms;">
+                <div class="p-6 md:p-8 text-center relative overflow-hidden bg-gradient-to-b from-[#F9F1E5] to-white border-b border-amber-100/50">
+                    <div class="absolute top-0 right-0 p-4 opacity-10">
+                        <i data-lucide="target" class="w-[100px] h-[100px] md:w-[120px] md:h-[120px]"></i>
                     </div>
-                  ))}
+                    <h4 class="font-sans-vi text-[#003366] text-xs md:text-sm font-bold tracking-widest uppercase mb-2 md:mb-3">Phát triển Khách Hàng Mới</h4>
+                    <div class="inline-block bg-[#9A161F] text-white px-5 md:px-6 py-2 rounded-full font-serif-vi font-bold text-lg md:text-2xl shadow-md mb-3 md:mb-4 relative z-10">DỰ ÁN ZMP</div>
+                    <p class="text-gray-600 font-medium italic relative z-10 text-sm md:text-base">Giải pháp thu hút KHM out of store</p>
                 </div>
-              </div>
-
-              {/* Card Creative Output (What the team did) */}
-              <div className="p-6 bg-[#003366] text-white">
-                 <div className="flex items-center gap-2 mb-4">
-                    <Palette size={18} className="text-[#B8860B]" />
-                    <h5 className="font-bold text-sm tracking-wide text-[#B8860B] uppercase">Creative Production</h5>
-                 </div>
-                 <p className="text-sm font-medium mb-4 text-gray-200 leading-relaxed border-b border-blue-800 pb-3">
-                    {project.creativeOutput.title}
-                 </p>
-                 <ul className="space-y-2">
-                    {project.creativeOutput.items.map((item, i) => (
-                      <li key={i} className="flex items-start gap-2 text-sm text-gray-300">
-                        <span className="text-[#B8860B] mt-1">•</span>
-                        <span>{item}</span>
-                      </li>
-                    ))}
-                 </ul>
-              </div>
-
+                <div class="p-6 bg-white flex-grow">
+                    <h5 class="text-xs font-bold text-gray-400 uppercase tracking-widest mb-4 text-center">Hiệu Quả Kinh Doanh</h5>
+                    <div class="grid grid-cols-1 gap-4">
+                        <div class="flex items-center justify-between p-3 rounded-xl bg-red-50 border border-red-100">
+                            <div class="flex items-center gap-3">
+                                <i data-lucide="trending-up" class="w-[18px] h-[18px] text-red-700"></i>
+                                <span class="text-gray-600 text-sm font-medium">Doanh thu</span>
+                            </div>
+                            <span class="font-bold text-2xl text-[#9A161F]">9.4 Tỷ</span>
+                        </div>
+                        <div class="flex items-center justify-between p-3 rounded-xl bg-gray-50">
+                            <div class="flex items-center gap-3">
+                                <i data-lucide="eye" class="w-[18px] h-[18px] text-blue-800"></i>
+                                <span class="text-gray-600 text-sm font-medium">Lượt truy cập</span>
+                            </div>
+                            <span class="font-bold text-lg text-gray-800">127.467</span>
+                        </div>
+                        <div class="flex items-center justify-between p-3 rounded-xl bg-gray-50">
+                            <div class="flex items-center gap-3">
+                                <i data-lucide="users" class="w-[18px] h-[18px] text-amber-600"></i>
+                                <span class="text-gray-600 text-sm font-medium">KHM Mới</span>
+                            </div>
+                            <span class="font-bold text-lg text-gray-800">1.177</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="p-6 bg-[#003366] text-white">
+                    <div class="flex items-center gap-2 mb-4">
+                        <i data-lucide="palette" class="w-[18px] h-[18px] text-[#B8860B]"></i>
+                        <h5 class="font-bold text-sm tracking-wide text-[#B8860B] uppercase">Creative Production</h5>
+                    </div>
+                    <p class="text-sm font-medium mb-4 text-gray-200 leading-relaxed border-b border-blue-800 pb-3">Thiết kế full material cho campaign XTT Valentine</p>
+                    <ul class="space-y-2">
+                        <li class="flex items-start gap-2 text-sm text-gray-300"><span class="text-[#B8860B] mt-1">•</span><span>9 Visuals chính</span></li>
+                        <li class="flex items-start gap-2 text-sm text-gray-300"><span class="text-[#B8860B] mt-1">•</span><span>9 Videos truyền thông</span></li>
+                        <li class="flex items-start gap-2 text-sm text-gray-300"><span class="text-[#B8860B] mt-1">•</span><span>30 Artworks đa nền tảng</span></li>
+                        <li class="flex items-start gap-2 text-sm text-gray-300"><span class="text-[#B8860B] mt-1">•</span><span>243 Bản Adaptation (Sub-brand/BST)</span></li>
+                    </ul>
+                </div>
             </div>
-          ))}
+
+            <!-- Card 2: E-Brochure -->
+            <div class="fade-in-section glass-panel rounded-3xl overflow-hidden shadow-lg border border-gray-100 hover:shadow-2xl transition-all duration-500 transform hover:-translate-y-2 flex flex-col" style="transition-delay: 500ms;">
+                <div class="p-6 md:p-8 text-center relative overflow-hidden bg-gradient-to-b from-[#F9F1E5] to-white border-b border-amber-100/50">
+                    <div class="absolute top-0 right-0 p-4 opacity-10">
+                        <i data-lucide="book-open" class="w-[100px] h-[100px] md:w-[120px] md:h-[120px]"></i>
+                    </div>
+                    <h4 class="font-sans-vi text-[#003366] text-xs md:text-sm font-bold tracking-widest uppercase mb-2 md:mb-3">Tăng doanh thu hàng mới</h4>
+                    <div class="inline-block bg-[#9A161F] text-white px-5 md:px-6 py-2 rounded-full font-serif-vi font-bold text-lg md:text-2xl shadow-md mb-3 md:mb-4 relative z-10">E - BROCHURE</div>
+                    <p class="text-gray-600 font-medium italic relative z-10 text-sm md:text-base">E-Catalog giới thiệu sản phẩm mới</p>
+                </div>
+                <div class="p-6 bg-white flex-grow">
+                    <h5 class="text-xs font-bold text-gray-400 uppercase tracking-widest mb-4 text-center">Hiệu Quả Kinh Doanh</h5>
+                    <div class="grid grid-cols-1 gap-4">
+                        <div class="flex items-center justify-between p-3 rounded-xl bg-red-50 border border-red-100">
+                            <div class="flex items-center gap-3">
+                                <i data-lucide="eye" class="w-[18px] h-[18px] text-red-700"></i>
+                                <span class="text-gray-600 text-sm font-medium">Lượt truy cập</span>
+                            </div>
+                            <span class="font-bold text-2xl text-[#9A161F]">21.539</span>
+                        </div>
+                        <div class="flex items-center justify-between p-3 rounded-xl bg-gray-50">
+                            <div class="flex items-center gap-3">
+                                <i data-lucide="award" class="w-[18px] h-[18px] text-blue-800"></i>
+                                <span class="text-gray-600 text-sm font-medium">Sản phẩm mới</span>
+                            </div>
+                            <span class="font-bold text-lg text-gray-800">129</span>
+                        </div>
+                        <div class="flex items-center justify-between p-3 rounded-xl bg-gray-50">
+                            <div class="flex items-center gap-3">
+                                <i data-lucide="trending-up" class="w-[18px] h-[18px] text-amber-600"></i>
+                                <span class="text-gray-600 text-sm font-medium">Tốc độ ra mắt</span>
+                            </div>
+                            <span class="font-bold text-lg text-gray-800">Nhanh</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="p-6 bg-[#003366] text-white">
+                    <div class="flex items-center gap-2 mb-4">
+                        <i data-lucide="palette" class="w-[18px] h-[18px] text-[#B8860B]"></i>
+                        <h5 class="font-bold text-sm tracking-wide text-[#B8860B] uppercase">Creative Production</h5>
+                    </div>
+                    <p class="text-sm font-medium mb-4 text-gray-200 leading-relaxed border-b border-blue-800 pb-3">Thiết kế E-Catalog, đưa sản phẩm go to market</p>
+                    <ul class="space-y-2">
+                        <li class="flex items-start gap-2 text-sm text-gray-300"><span class="text-[#B8860B] mt-1">•</span><span>Thiết kế UI/UX 32 trang layout</span></li>
+                        <li class="flex items-start gap-2 text-sm text-gray-300"><span class="text-[#B8860B] mt-1">•</span><span>Tối ưu hóa hình ảnh 129 mẫu hàng</span></li>
+                        <li class="flex items-start gap-2 text-sm text-gray-300"><span class="text-[#B8860B] mt-1">•</span><span>Tương thích đa thiết bị (Mobile/Web)</span></li>
+                    </ul>
+                </div>
+            </div>
+
+            <!-- Card 3: Thư Viện Video -->
+            <div class="fade-in-section glass-panel rounded-3xl overflow-hidden shadow-lg border border-gray-100 hover:shadow-2xl transition-all duration-500 transform hover:-translate-y-2 flex flex-col" style="transition-delay: 700ms;">
+                <div class="p-6 md:p-8 text-center relative overflow-hidden bg-gradient-to-b from-[#F9F1E5] to-white border-b border-amber-100/50">
+                    <div class="absolute top-0 right-0 p-4 opacity-10">
+                        <i data-lucide="video" class="w-[100px] h-[100px] md:w-[120px] md:h-[120px]"></i>
+                    </div>
+                    <h4 class="font-sans-vi text-[#003366] text-xs md:text-sm font-bold tracking-widest uppercase mb-2 md:mb-3">Tăng doanh thu hàng mới</h4>
+                    <div class="inline-block bg-[#9A161F] text-white px-5 md:px-6 py-2 rounded-full font-serif-vi font-bold text-lg md:text-2xl shadow-md mb-3 md:mb-4 relative z-10">THƯ VIỆN VIDEO</div>
+                    <p class="text-gray-600 font-medium italic relative z-10 text-sm md:text-base">Công cụ hỗ trợ TVV tư vấn bán hàng</p>
+                </div>
+                <div class="p-6 bg-white flex-grow">
+                    <h5 class="text-xs font-bold text-gray-400 uppercase tracking-widest mb-4 text-center">Hiệu Quả Kinh Doanh</h5>
+                    <div class="grid grid-cols-1 gap-4">
+                        <div class="flex items-center justify-between p-3 rounded-xl bg-red-50 border border-red-100">
+                            <div class="flex items-center gap-3">
+                                <i data-lucide="eye" class="w-[18px] h-[18px] text-red-700"></i>
+                                <span class="text-gray-600 text-sm font-medium">Lượt truy cập</span>
+                            </div>
+                            <span class="font-bold text-2xl text-[#9A161F]">1.351</span>
+                        </div>
+                        <div class="flex items-center justify-between p-3 rounded-xl bg-gray-50">
+                            <div class="flex items-center gap-3">
+                                <i data-lucide="users" class="w-[18px] h-[18px] text-blue-800"></i>
+                                <span class="text-gray-600 text-sm font-medium">TVV sử dụng</span>
+                            </div>
+                            <span class="font-bold text-lg text-gray-800">615</span>
+                        </div>
+                        <div class="flex items-center justify-between p-3 rounded-xl bg-gray-50">
+                            <div class="flex items-center gap-3">
+                                <i data-lucide="bar-chart-3" class="w-[18px] h-[18px] text-amber-600"></i>
+                                <span class="text-gray-600 text-sm font-medium">Tỷ lệ tương tác</span>
+                            </div>
+                            <span class="font-bold text-lg text-gray-800">Cao</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="p-6 bg-[#003366] text-white">
+                    <div class="flex items-center gap-2 mb-4">
+                        <i data-lucide="palette" class="w-[18px] h-[18px] text-[#B8860B]"></i>
+                        <h5 class="font-bold text-sm tracking-wide text-[#B8860B] uppercase">Creative Production</h5>
+                    </div>
+                    <p class="text-sm font-medium mb-4 text-gray-200 leading-relaxed border-b border-blue-800 pb-3">Quay dựng, thiết kế, sản xuất video hàng mới</p>
+                    <ul class="space-y-2">
+                        <li class="flex items-start gap-2 text-sm text-gray-300"><span class="text-[#B8860B] mt-1">•</span><span>394 Videos (Explainer & Review chi tiết)</span></li>
+                        <li class="flex items-start gap-2 text-sm text-gray-300"><span class="text-[#B8860B] mt-1">•</span><span>6 Banners/Videos truyền thông</span></li>
+                        <li class="flex items-start gap-2 text-sm text-gray-300"><span class="text-[#B8860B] mt-1">•</span><span>Kịch bản chốt sale cho từng sản phẩm</span></li>
+                    </ul>
+                </div>
+            </div>
+
         </div>
-
-      </main>
-      
-      {/* Footer */}
-      <footer className="mt-20 text-center pb-8">
-         <p className="text-gray-400 text-sm font-sans-vi">
+    </main>
+    
+    <!-- Footer -->
+    <footer class="mt-20 text-center pb-8">
+        <p class="text-gray-400 text-sm font-sans-vi">
             © 2024 PNJ Creative Hub. Báo cáo nội bộ dành cho cấp Quản lý.
-         </p>
-      </footer>
-    </div>
-  );
-};
+        </p>
+    </footer>
 
-export default Dashboard;
+    <!-- Khởi tạo Icons và Animation -->
+    <script>
+        // Render các icon từ thư viện Lucide
+        lucide.createIcons();
+
+        // Kích hoạt hiệu ứng fade-in khi load trang
+        document.addEventListener("DOMContentLoaded", () => {
+            setTimeout(() => {
+                document.querySelectorAll('.fade-in-section').forEach(el => {
+                    el.classList.add('is-visible');
+                });
+            }, 100);
+        });
+    </script>
+</body>
+</html>
