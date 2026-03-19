@@ -667,7 +667,7 @@
                     <div class="absolute -bottom-1 md:-bottom-2 left-[10%] right-[10%] h-2 md:h-4 bg-[#B8860B]/20 rounded-full blur-md -z-10"></div>
                 </div>
                 <p class="font-sans-vi text-gray-600 text-sm md:text-lg lg:text-xl max-w-3xl mx-auto px-4 leading-relaxed text-balance">
-                    Báo cáo hiệu quả triển khai nội dung tiếp thị, phủ sóng thông điệp <span class="font-semibold text-[#003366]">Xuân, Valentine, Thần Tài</span> trên các nền tảng Owned & Earned Media.
+                   Truyền thông CTKM <span class="font-semibold text-[#003366]">Xuân, Valentine, Thần Tài</span> từ Retail / OMNI và BST mới từ Brand / Sub - brand.
                 </p>
             </div>
 
@@ -687,95 +687,89 @@
             <!-- SUB-TAB 1: BLOG -->
             <!-- ========================= -->
             <div id="content-blog" class="content-sub-panel block fade-in-section is-visible">
-                <!-- Dashboard Stats -->
-                <div class="grid grid-cols-1 md:grid-cols-3 gap-4 md:gap-6 mb-10">
-                    <div class="glass-panel rounded-2xl p-6 border border-gray-100 shadow-sm flex items-center gap-4 hover:shadow-md transition-shadow">
-                        <div class="w-12 h-12 rounded-full bg-blue-50 flex items-center justify-center text-[#003366] shrink-0">
-                            <i data-lucide="eye" class="w-6 h-6"></i>
+                <!-- Dashboard Stats (Chỉ giữ 2 thẻ) -->
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-4 md:gap-8 max-w-4xl mx-auto mb-10">
+                    <div class="glass-panel rounded-2xl p-6 md:p-8 border border-gray-100 shadow-sm flex items-center gap-4 md:gap-6 hover:shadow-md transition-shadow">
+                        <div class="w-12 h-12 md:w-16 md:h-16 rounded-full bg-blue-50 flex items-center justify-center text-[#003366] shrink-0">
+                            <i data-lucide="eye" class="w-6 h-6 md:w-8 md:h-8"></i>
                         </div>
                         <div>
-                            <p class="text-[10px] sm:text-xs text-gray-500 font-bold tracking-wider uppercase mb-1">Tổng lượt xem nội dung</p>
-                            <h4 class="text-2xl sm:text-3xl font-bold text-[#9A161F]">100.000+</h4>
+                            <p class="text-xs md:text-sm text-gray-500 font-bold tracking-wider uppercase mb-1">Tổng lượt xem nội dung</p>
+                            <h4 class="text-3xl md:text-4xl font-bold text-[#9A161F]">49.000+</h4>
                         </div>
                     </div>
-                    <div class="glass-panel rounded-2xl p-6 border border-gray-100 shadow-sm flex items-center gap-4 hover:shadow-md transition-shadow">
-                        <div class="w-12 h-12 rounded-full bg-amber-50 flex items-center justify-center text-[#B8860B] shrink-0">
-                            <i data-lucide="file-text" class="w-6 h-6"></i>
+                    <div class="glass-panel rounded-2xl p-6 md:p-8 border border-gray-100 shadow-sm flex items-center gap-4 md:gap-6 hover:shadow-md transition-shadow">
+                        <div class="w-12 h-12 md:w-16 md:h-16 rounded-full bg-amber-50 flex items-center justify-center text-[#B8860B] shrink-0">
+                            <i data-lucide="file-text" class="w-6 h-6 md:w-8 md:h-8"></i>
                         </div>
                         <div>
-                            <p class="text-[10px] sm:text-xs text-gray-500 font-bold tracking-wider uppercase mb-1">Bài viết GTM Nội bộ</p>
-                            <h4 class="text-2xl sm:text-3xl font-bold text-[#003366]">48 <span class="text-base sm:text-lg font-medium text-gray-500">bài</span></h4>
-                        </div>
-                    </div>
-                    <div class="glass-panel rounded-2xl p-6 border border-gray-100 shadow-sm flex items-center gap-4 hover:shadow-md transition-shadow">
-                        <div class="w-12 h-12 rounded-full bg-red-50 flex items-center justify-center text-[#9A161F] shrink-0">
-                            <i data-lucide="globe" class="w-6 h-6"></i>
-                        </div>
-                        <div>
-                            <p class="text-[10px] sm:text-xs text-gray-500 font-bold tracking-wider uppercase mb-1">Bài PR Báo chí</p>
-                            <h4 class="text-2xl sm:text-3xl font-bold text-[#003366]">12 <span class="text-base sm:text-lg font-medium text-gray-500">bài</span></h4>
+                            <p class="text-xs md:text-sm text-gray-500 font-bold tracking-wider uppercase mb-1">Bài Blog</p>
+                            <h4 class="text-3xl md:text-4xl font-bold text-[#003366]">15 <span class="text-lg md:text-xl font-medium text-gray-500">bài</span></h4>
                         </div>
                     </div>
                 </div>
 
-                <!-- Article Filter -->
-                <div class="flex flex-wrap justify-center gap-2 sm:gap-3 mb-8">
-                    <button onclick="filterArticles('all')" id="btn-filter-all" class="article-filter-btn px-5 sm:px-6 py-2 sm:py-2.5 rounded-full font-bold text-xs sm:text-sm transition-all duration-300 bg-[#003366] text-white shadow-md">Tất cả</button>
-                    <button onclick="filterArticles('news')" id="btn-filter-news" class="article-filter-btn px-5 sm:px-6 py-2 sm:py-2.5 rounded-full font-bold text-xs sm:text-sm transition-all duration-300 bg-white text-gray-600 border border-gray-200 hover:border-[#003366] hover:text-[#003366]">Tin tức GTM</button>
-                    <button onclick="filterArticles('press')" id="btn-filter-press" class="article-filter-btn px-5 sm:px-6 py-2 sm:py-2.5 rounded-full font-bold text-xs sm:text-sm transition-all duration-300 bg-white text-gray-600 border border-gray-200 hover:border-[#003366] hover:text-[#003366]">Báo chí</button>
-                </div>
-
-                <!-- Articles Grid -->
-                <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 lg:gap-8 mb-12" id="articles-grid">
-                    
-                    <!-- Card 1 -->
-                    <div class="article-card news bg-white rounded-2xl overflow-hidden shadow-lg border border-gray-100 hover:-translate-y-2 transition-transform duration-300 flex flex-col">
-                        <div class="h-48 bg-gray-200 relative overflow-hidden group">
-                            <img src="https://placehold.co/600x400/003366/FFFFFF?text=Tin+Nội+Bộ&font=Montserrat" alt="Thumbnail" class="w-full h-full object-cover transform group-hover:scale-105 transition-transform duration-500">
-                            <div class="absolute top-4 left-4 bg-[#003366] text-white text-[10px] sm:text-xs font-bold px-3 py-1.5 rounded-full uppercase tracking-wider shadow-md">GTM Nội bộ</div>
-                        </div>
-                        <div class="p-6 flex flex-col flex-1">
-                            <p class="text-xs text-gray-400 mb-2 font-medium flex items-center gap-1.5"><i data-lucide="calendar" class="w-3.5 h-3.5"></i> 10/01/2024</p>
-                            <h4 class="font-bold text-[#003366] text-lg sm:text-xl mb-3 line-clamp-2 hover:text-[#B8860B] transition-colors cursor-pointer leading-tight">PNJ ra mắt BST trang sức Kim Bảo Như Ý Xuân 2024</h4>
-                            <p class="text-gray-600 text-sm mb-5 line-clamp-3 leading-relaxed">Bộ tài liệu hướng dẫn chi tiết USP sản phẩm, cách thức trưng bày và kịch bản tư vấn dành riêng cho Cửa hàng trưởng và TVV toàn hệ thống.</p>
-                            <div class="mt-auto pt-4 border-t border-gray-100">
-                                <a href="#" class="text-sm font-bold text-[#B8860B] flex items-center gap-2 hover:text-[#9A161F] transition-colors">Đọc tài liệu <i data-lucide="arrow-right" class="w-4 h-4"></i></a>
-                            </div>
-                        </div>
+                <!-- Sub-brand Section -->
+                <div class="max-w-6xl mx-auto mb-12">
+                    <div class="text-center mb-8">
+                        <h3 class="font-bold text-[#003366] text-lg md:text-xl tracking-widest uppercase mb-2">Bài viết</h3>
+                        <div class="h-1 w-16 bg-[#B8860B] mx-auto rounded-full"></div>
                     </div>
 
-                    <!-- Card 2 -->
-                    <div class="article-card press bg-white rounded-2xl overflow-hidden shadow-lg border border-gray-100 hover:-translate-y-2 transition-transform duration-300 flex flex-col">
-                        <div class="h-48 bg-gray-200 relative overflow-hidden group">
-                            <img src="https://placehold.co/600x400/9A161F/FFFFFF?text=Báo+Chí&font=Montserrat" alt="Thumbnail" class="w-full h-full object-cover transform group-hover:scale-105 transition-transform duration-500">
-                            <div class="absolute top-4 left-4 bg-[#B8860B] text-white text-[10px] sm:text-xs font-bold px-3 py-1.5 rounded-full uppercase tracking-wider shadow-md">Báo chí</div>
-                        </div>
-                        <div class="p-6 flex flex-col flex-1">
-                            <p class="text-xs text-gray-400 mb-2 font-medium flex items-center gap-1.5"><i data-lucide="calendar" class="w-3.5 h-3.5"></i> 05/02/2024</p>
-                            <h4 class="font-bold text-[#003366] text-lg sm:text-xl mb-3 line-clamp-2 hover:text-[#B8860B] transition-colors cursor-pointer leading-tight">Bí quyết chọn trang sức Thần Tài rước lộc đầu năm</h4>
-                            <p class="text-gray-600 text-sm mb-5 line-clamp-3 leading-relaxed">Bài viết PR định hướng khách hàng tiêu dùng trong dịp lễ Thần Tài, phủ sóng trên các trang báo mạng lớn như VnExpress, Kenh14, Thanh Niên.</p>
-                            <div class="mt-auto pt-4 border-t border-gray-100">
-                                <a href="#" class="text-sm font-bold text-[#B8860B] flex items-center gap-2 hover:text-[#9A161F] transition-colors">Xem bài viết <i data-lucide="arrow-right" class="w-4 h-4"></i></a>
+                    <div class="grid grid-cols-1 md:grid-cols-3 gap-6 md:gap-8">
+                        
+                        <!-- DISNEY -->
+                        <div class="bg-white rounded-2xl overflow-hidden shadow-lg border border-gray-100 group flex flex-col hover:-translate-y-2 transition-transform duration-300">
+                            <div class="h-40 md:h-48 bg-[#E6F3FA] relative overflow-hidden flex items-center justify-center p-6 border-b border-gray-100">
+                                <img 
+                                    src="./DISNEY xanh.png" 
+                                    alt="Disney PNJ" 
+                                    class="h-full w-auto object-contain transform group-hover:scale-105 transition-transform duration-500"
+                                    onerror="this.onerror=null; this.src='https://placehold.co/400x200/003366/FFFFFF?text=DISNEY&font=Montserrat';"
+                                />
+                            </div>
+                            <div class="p-6 md:p-8 flex-1 flex flex-col justify-center items-center text-center">
+                                <h4 class="font-extrabold text-[#003366] text-xl md:text-2xl mb-3">DISNEY</h4>
+                                <p class="text-gray-600 text-sm leading-relaxed mb-4">Các bộ sưu tập trang sức độc quyền mang đậm tinh thần phép màu từ Disney, nhắm tới khách hàng yêu thích sự ngọt ngào, mộng mơ.</p>
+                                <button class="mt-auto px-6 py-2 rounded-full border-2 border-[#003366] text-[#003366] font-bold text-xs uppercase tracking-wider hover:bg-[#003366] hover:text-white transition-colors">Xem chi tiết</button>
                             </div>
                         </div>
-                    </div>
 
-                    <!-- Card 3 -->
-                    <div class="article-card news bg-white rounded-2xl overflow-hidden shadow-lg border border-gray-100 hover:-translate-y-2 transition-transform duration-300 flex flex-col">
-                        <div class="h-48 bg-gray-200 relative overflow-hidden group">
-                            <img src="https://placehold.co/600x400/003366/FFFFFF?text=Tin+Nội+Bộ&font=Montserrat" alt="Thumbnail" class="w-full h-full object-cover transform group-hover:scale-105 transition-transform duration-500">
-                            <div class="absolute top-4 left-4 bg-[#003366] text-white text-[10px] sm:text-xs font-bold px-3 py-1.5 rounded-full uppercase tracking-wider shadow-md">GTM Nội bộ</div>
-                        </div>
-                        <div class="p-6 flex flex-col flex-1">
-                            <p class="text-xs text-gray-400 mb-2 font-medium flex items-center gap-1.5"><i data-lucide="calendar" class="w-3.5 h-3.5"></i> 12/02/2024</p>
-                            <h4 class="font-bold text-[#003366] text-lg sm:text-xl mb-3 line-clamp-2 hover:text-[#B8860B] transition-colors cursor-pointer leading-tight">Cẩm nang tư vấn BST Valentine - Trao gửi yêu thương</h4>
-                            <p class="text-gray-600 text-sm mb-5 line-clamp-3 leading-relaxed">Đồng bộ thông điệp truyền thông từ khối xuống cửa hàng, cung cấp các key selling points đắt giá để TVV chốt sale hiệu quả ngày Lễ Tình Nhân.</p>
-                            <div class="mt-auto pt-4 border-t border-gray-100">
-                                <a href="#" class="text-sm font-bold text-[#B8860B] flex items-center gap-2 hover:text-[#9A161F] transition-colors">Đọc tài liệu <i data-lucide="arrow-right" class="w-4 h-4"></i></a>
+                        <!-- STYLE -->
+                        <div class="bg-white rounded-2xl overflow-hidden shadow-lg border border-gray-100 group flex flex-col hover:-translate-y-2 transition-transform duration-300">
+                            <div class="h-40 md:h-48 bg-[#F4F4F4] relative overflow-hidden flex items-center justify-center p-6 border-b border-gray-100">
+                                <img 
+                                    src="./STYLE đen.png" 
+                                    alt="Style by PNJ" 
+                                    class="h-full w-auto object-contain transform group-hover:scale-105 transition-transform duration-500"
+                                    onerror="this.onerror=null; this.src='https://placehold.co/400x200/111111/FFFFFF?text=STYLE&font=Montserrat';"
+                                />
+                            </div>
+                            <div class="p-6 md:p-8 flex-1 flex flex-col justify-center items-center text-center">
+                                <h4 class="font-extrabold text-gray-900 text-xl md:text-2xl mb-3">STYLE</h4>
+                                <p class="text-gray-600 text-sm leading-relaxed mb-4">Dòng sản phẩm thể hiện cá tính mạnh mẽ, thời thượng. Dành cho giới trẻ yêu thích thể hiện cái tôi qua ngôn ngữ trang sức.</p>
+                                <button class="mt-auto px-6 py-2 rounded-full border-2 border-gray-900 text-gray-900 font-bold text-xs uppercase tracking-wider hover:bg-gray-900 hover:text-white transition-colors">Xem chi tiết</button>
                             </div>
                         </div>
-                    </div>
 
+                        <!-- MANCODE -->
+                        <div class="bg-white rounded-2xl overflow-hidden shadow-lg border border-gray-100 group flex flex-col hover:-translate-y-2 transition-transform duration-300">
+                            <div class="h-40 md:h-48 bg-[#FFF5E6] relative overflow-hidden flex items-center justify-center p-6 border-b border-gray-100">
+                                <img 
+                                    src="./mancode cam.png" 
+                                    alt="Mancode" 
+                                    class="h-full w-auto object-contain transform group-hover:scale-105 transition-transform duration-500"
+                                    onerror="this.onerror=null; this.src='https://placehold.co/400x200/D97706/FFFFFF?text=MANCODE&font=Montserrat';"
+                                />
+                            </div>
+                            <div class="p-6 md:p-8 flex-1 flex flex-col justify-center items-center text-center">
+                                <h4 class="font-extrabold text-[#D97706] text-xl md:text-2xl mb-3">MANCODE</h4>
+                                <p class="text-gray-600 text-sm leading-relaxed mb-4">Bộ sưu tập trang sức nam tính, thanh lịch và cuốn hút. Khẳng định phong thái phái mạnh hiện đại.</p>
+                                <button class="mt-auto px-6 py-2 rounded-full border-2 border-[#D97706] text-[#D97706] font-bold text-xs uppercase tracking-wider hover:bg-[#D97706] hover:text-white transition-colors">Xem chi tiết</button>
+                            </div>
+                        </div>
+
+                    </div>
                 </div>
 
                 <!-- SMT Takeaway -->
