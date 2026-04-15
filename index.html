@@ -50,6 +50,9 @@
         ::-webkit-scrollbar { width: 6px; height: 6px; }
         ::-webkit-scrollbar-track { background: transparent; }
         ::-webkit-scrollbar-thumb { background: #B8860B; border-radius: 10px; }
+
+        .custom-scrollbar-container::-webkit-scrollbar { display: none; }
+        .custom-scrollbar-container { -ms-overflow-style: none; scrollbar-width: none; }
     </style>
 </head>
 <body class="min-h-screen bg-[#FCF9F2] font-sans selection:bg-[#B8860B] selection:text-white pb-12 overflow-x-hidden">
@@ -67,7 +70,7 @@
             />
             
             <div class="border-l-2 border-gray-200 pl-3 md:pl-4">
-                <h1 class="font-bold text-[#003366] text-sm md:text-lg lg:text-xl tracking-wider leading-tight">CREATIVE HUB</h1>
+                <h1 class="font-bold text-[#003366] text-sm md:text-lg lg:text-xl tracking-wider leading-tight uppercase">CREATIVE HUB</h1>
                 <p class="text-[9px] sm:text-[10px] md:text-xs text-gray-500 uppercase tracking-widest leading-tight mt-0.5">Supporting Center</p>
             </div>
         </div>
@@ -92,11 +95,11 @@
     </div>
 
     <!-- ========================================== -->
-    <!-- TEAM DESIGN PANEL (Chứa toàn bộ nội dung cũ) -->
+    <!-- TEAM DESIGN PANEL -->
     <!-- ========================================== -->
     <div id="team-design" class="team-panel block fade-in-section is-visible">
 
-    <!-- MAIN MENU TABS (Điều hướng cấp 1) -->
+    <!-- MAIN MENU TABS -->
     <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 mt-4 md:mt-6">
         <div class="flex justify-center mb-6 md:mb-10">
             <div class="bg-white p-1.5 rounded-3xl sm:rounded-full shadow-md border border-gray-200 flex flex-col sm:flex-row w-full max-w-4xl relative z-20 gap-1 sm:gap-0">
@@ -113,15 +116,11 @@
         </div>
     </div>
 
-    <!-- WRAPPER CHO CÁC MÀN HÌNH CHÍNH -->
     <main class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         
-        <!-- ========================================== -->
         <!-- MÀN HÌNH 1: DỰ ÁN NỔI BẬT -->
-        <!-- ========================================== -->
         <div id="main-projects" class="main-tab-panel block fade-in-section is-visible">
             
-            <!-- Header Section -->
             <div class="text-center mb-8 md:mb-12">
                 <div class="relative inline-block mb-3 md:mb-4">
                     <h2 class="font-serif-vi text-3xl sm:text-4xl md:text-5xl lg:text-6xl text-[#003366] font-bold drop-shadow-lg relative z-10 px-4 leading-tight uppercase">
@@ -134,7 +133,6 @@
                 </p>
             </div>
 
-            <!-- Content Grid -->
             <div class="grid grid-cols-1 md:grid-cols-2 gap-6 lg:gap-10 pb-8">
                 
                 <!-- CARD 1: ZMP -->
@@ -157,14 +155,11 @@
                             <span class="font-sans-vi text-sm font-semibold text-[#003366] mt-1 block">Lượt chia sẻ hoạt động</span>
                         </div>
                          <div>
-                            
                             <span class="font-sans-vi text-sm font-semibold text-[#9A161F] mt-1 block">Số liệu theo Chương Trình 8.3 </span>
                         </div>
                     </div>
 
-                    <!-- Phần Bottom của ZMP (List + Media) dóng hàng bằng mt-auto -->
                     <div class="mt-auto pt-6 border-t border-gray-200">
-                        <!-- Khóa chiều cao danh sách để bằng với E-Brochure -->
                         <div class="h-[180px] sm:h-[200px] flex flex-col justify-start">
                             <p class="font-sans-vi text-sm sm:text-base font-semibold text-[#003366] mb-4 text-center">Thiết kế full material cho campaign CT 8.3<br>và SN PNJ 38 năm</p>
                             <div class="flex justify-center flex-1">
@@ -178,25 +173,16 @@
                         </div>
                     </div>
 
-                    <!-- Customer's Journey Video -->
                     <div class="mt-6 pt-6 border-t border-dashed border-gray-300">
                         <div class="flex items-center justify-center gap-2 mb-3 min-h-[48px]">
                             <i data-lucide="smartphone" class="w-4 h-4 text-[#9A161F] shrink-0"></i>
-                            <p class="font-sans-vi text-xs sm:text-sm font-bold text-[#9A161F] text-center uppercase tracking-widest leading-snug">
+                            <p class="font-sans-vi text-xs sm:text-sm font-bold text-[#9A161F] text-center uppercase tracking-widest leading-snug text-balance">
                                 Video giới thiệu ZMP <br class="hidden sm:block"> Trợ thủ số đắc lực cho chi nhánh
                             </p>
                         </div>
                         <div class="rounded-[1.25rem] overflow-hidden shadow-lg border-2 border-[#F9F1E5] p-1.5 bg-[#F9F1E5] h-[280px] sm:h-[320px] w-full">
-                            <video 
-                                controls 
-                                autoplay 
-                                muted 
-                                loop 
-                                playsinline
-                                class="w-full h-full object-cover rounded-xl bg-black shadow-sm"
-                            >
+                            <video controls autoplay muted loop playsinline class="w-full h-full object-cover rounded-xl bg-black shadow-sm">
                                 <source src="https://res.cloudinary.com/dhe7uziws/video/upload/v1776226195/qkblj54tkrwjd3bn2x7l.mp4" type="video/mp4">
-                                Trình duyệt của bạn không hỗ trợ thẻ video.
                             </video>
                         </div>
                     </div>
@@ -214,16 +200,14 @@
 
                     <div class="flex-1 flex items-center justify-center py-10 md:py-16">
                         <div class="text-center">
-                            <a href="https://pnj-ebrochure.site/" target="_blank" rel="noopener noreferrer" class="inline-flex items-center justify-center gap-2 bg-[#9A161F] hover:bg-[#7a1118] text-white font-bold py-3 sm:py-4 px-8 sm:px-10 rounded-full shadow-[0_4px_15px_rgba(154,22,31,0.4)] hover:shadow-[0_6px_20px_rgba(154,22,31,0.6)] transition-all duration-300 transform hover:-translate-y-1 font-sans-vi text-base sm:text-lg tracking-wide">
+                            <a href="https://pnj-ebrochure.site/" target="_blank" rel="noopener noreferrer" class="inline-flex items-center justify-center gap-2 bg-[#9A161F] hover:bg-[#7a1118] text-white font-bold py-3 sm:py-4 px-8 sm:px-10 rounded-full shadow-[0_4px_15px_rgba(154,22,31,0.4)] hover:shadow-[0_6px_20px_rgba(154,22,31,0.6)] transition-all duration-300 transform hover:-translate-y-1 font-sans-vi text-base sm:text-lg tracking-wide uppercase">
                                 CLICK XEM NGAY
                                 <i data-lucide="arrow-right" class="w-5 h-5"></i>
                             </a>
                         </div>
                     </div>
 
-                    <!-- Phần Bottom của E-Brochure (List + Media) dóng hàng bằng mt-auto -->
                     <div class="mt-auto pt-6 border-t border-gray-200">
-                        <!-- Khóa chiều cao danh sách để bằng với ZMP -->
                         <div class="h-[180px] sm:h-[200px] flex flex-col justify-start">
                             <p class="font-sans-vi text-sm sm:text-base font-semibold text-[#003366] mb-4 text-center">Thiết kế full material cho E-Brochure<br>(layout, KV, Video,...)</p>
                             <div class="flex justify-center flex-1">
@@ -236,7 +220,6 @@
                         </div>
                     </div>
 
-                    <!-- E-Brochure Image Demo (Scrollable) -->
                     <div class="mt-6 pt-6 border-t border-dashed border-gray-300">
                         <div class="flex items-center justify-center gap-2 mb-3 min-h-[48px]">
                             <i data-lucide="smartphone" class="w-4 h-4 text-[#9A161F] shrink-0"></i>
@@ -245,7 +228,6 @@
                             </p>
                         </div>
                         
-                        <!-- Khung điện thoại giả lập với tính năng Scroll khóa chiều cao bằng với Video -->
                         <div class="rounded-[1.25rem] shadow-lg border-2 border-[#F9F1E5] p-1.5 bg-[#F9F1E5] h-[280px] sm:h-[320px] w-full">
                             <div class="h-full w-full overflow-y-auto rounded-xl bg-white shadow-inner custom-scrollbar-container">
                                 <img 
@@ -261,12 +243,9 @@
             </div>
         </div>
 
-        <!-- ========================================== -->
         <!-- MÀN HÌNH 2: VAI TRÒ CREATIVE HUB -->
-        <!-- ========================================== -->
         <div id="main-roles" class="main-tab-panel hidden fade-in-section">
             
-            <!-- Header Section Vai Trò -->
             <div class="text-center mb-8 md:mb-14">
                 <div class="relative inline-block mb-3 md:mb-6">
                     <h2 class="font-serif-vi text-2xl sm:text-4xl md:text-5xl lg:text-6xl text-[#9A161F] font-bold drop-shadow-lg relative z-10 px-2 leading-tight uppercase">
@@ -280,10 +259,8 @@
                 </p>
             </div>
 
-            <!-- HUB & SPOKES DASHBOARD GRID -->
             <div class="relative z-10 max-w-7xl mx-auto pb-8">
                 
-                <!-- Sơ đồ mạng lưới (Grid: 1 cột mobile, 2 tablet, 3 laptop) -->
                 <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-5 sm:gap-6 lg:gap-8 items-stretch">
                     
                     <!-- Box 1: KHCS -->
@@ -292,7 +269,7 @@
                             <div class="w-10 h-10 md:w-14 md:h-14 rounded-full bg-[#003366] flex items-center justify-center text-white shadow-md shrink-0">
                                 <i data-lucide="store" class="w-5 h-5 md:w-7 md:h-7"></i>
                             </div>
-                            <h3 class="font-extrabold text-[#003366] text-lg md:text-2xl">KHCS</h3>
+                            <h3 class="font-extrabold text-[#003366] text-lg md:text-2xl uppercase">KHCS</h3>
                         </div>
                         <div class="flex-1 flex flex-col">
                             <ul class="space-y-3 sm:space-y-4 mb-4">
@@ -301,27 +278,26 @@
                                     <span>28 KV, poster cho các CT (Khối / sub - brand):</span>
                                 </li>
                                 <li class="pl-6 text-xs sm:text-sm lg:text-base text-gray-600 list-disc list-inside">THI ĐUA NỘI BỘ</li>
-                                <li class="pl-6 text-xs sm:text-sm lg:text-base text-gray-600 list-disc list-inside">KHEN THƯỞNG (Chương Trình Nhật Bản)</li>
-                                <li class="pl-6 text-xs sm:text-sm lg:text-base text-gray-600 list-disc list-inside">POSTER THÔNG BÁO</li>
+                                <li class="pl-6 text-xs sm:text-sm lg:text-base text-gray-600 list-disc list-inside uppercase">Khen thưởng (Chương trình Nhật Bản)</li>
+                                <li class="pl-6 text-xs sm:text-sm lg:text-base text-gray-600 list-disc list-inside uppercase">Poster thông báo</li>
                             </ul>
                             
-                            <!-- Thư viện ảnh tham khảo dạng cuộn ngang có nút điều hướng -->
+                            <!-- Thư viện ảnh: Đã tăng kích thước mobile (w-[90%]) -->
                             <div class="relative w-full mt-auto mb-4 group">
-                                <!-- Nút sang trái -->
                                 <button onclick="document.getElementById('khcs-scroll-container').scrollBy({left: -200, behavior: 'smooth'})" 
                                     class="absolute left-[-12px] sm:left-[-16px] top-[40%] -translate-y-1/2 z-10 bg-white border border-gray-200 shadow-[0_2px_8px_rgba(0,0,0,0.15)] rounded-full p-1.5 text-[#003366] hover:bg-[#003366] hover:text-white transition-all focus:outline-none opacity-90 hover:opacity-100 flex items-center justify-center cursor-pointer">
                                     <i data-lucide="chevron-left" class="w-4 h-4 md:w-5 md:h-5"></i>
                                 </button>
 
-                                <div id="khcs-scroll-container" class="w-full overflow-x-auto flex gap-3 pb-3 pt-1 px-1 custom-scrollbar-container scroll-smooth snap-x snap-mandatory">
-                                    <img src="https://res.cloudinary.com/dhe7uziws/image/upload/v1776233778/rqkvyjn21kwt5iikizqk.png" alt="KHCS 1" class="h-20 sm:h-24 md:h-28 w-auto rounded-lg shadow-sm border border-gray-200 object-cover shrink-0 snap-center">
-                                    <img src="https://res.cloudinary.com/dhe7uziws/image/upload/v1776231540/ujdka8rxz5qvknmjjlwh.jpg" alt="KHCS 2" class="h-20 sm:h-24 md:h-28 w-auto rounded-lg shadow-sm border border-gray-200 object-cover shrink-0 snap-center">
-                                    <img src="https://res.cloudinary.com/dhe7uziws/image/upload/v1776231540/zlm0z25hrwm6yndrikql.jpg" alt="KHCS 3" class="h-20 sm:h-24 md:h-28 w-auto rounded-lg shadow-sm border border-gray-200 object-cover shrink-0 snap-center">
-                                    <img src="https://res.cloudinary.com/dhe7uziws/image/upload/v1776231540/tkzby2mwihz5wb2koivy.jpg" alt="KHCS 4" class="h-20 sm:h-24 md:h-28 w-auto rounded-lg shadow-sm border border-gray-200 object-cover shrink-0 snap-center">
-                                    <img src="https://res.cloudinary.com/dhe7uziws/image/upload/v1776231540/vjsx0sqt6493hf4rc6wy.jpg" alt="KHCS 5" class="h-20 sm:h-24 md:h-28 w-auto rounded-lg shadow-sm border border-gray-200 object-cover shrink-0 snap-center">
+                                <div id="khcs-scroll-container" class="w-full overflow-x-auto flex gap-4 pb-3 pt-1 px-1 custom-scrollbar-container scroll-smooth snap-x snap-mandatory">
+                                    <!-- Hình ảnh phủ rộng mobile -->
+                                    <img src="https://res.cloudinary.com/dhe7uziws/image/upload/v1776233778/rqkvyjn21kwt5iikizqk.png" alt="KHCS 1" class="w-[90%] sm:w-auto h-auto sm:h-24 md:h-28 rounded-lg shadow-sm border border-gray-200 object-cover shrink-0 snap-center">
+                                    <img src="https://res.cloudinary.com/dhe7uziws/image/upload/v1776231540/ujdka8rxz5qvknmjjlwh.jpg" alt="KHCS 2" class="w-[90%] sm:w-auto h-auto sm:h-24 md:h-28 rounded-lg shadow-sm border border-gray-200 object-cover shrink-0 snap-center">
+                                    <img src="https://res.cloudinary.com/dhe7uziws/image/upload/v1776231540/zlm0z25hrwm6yndrikql.jpg" alt="KHCS 3" class="w-[90%] sm:w-auto h-auto sm:h-24 md:h-28 rounded-lg shadow-sm border border-gray-200 object-cover shrink-0 snap-center">
+                                    <img src="https://res.cloudinary.com/dhe7uziws/image/upload/v1776231540/tkzby2mwihz5wb2koivy.jpg" alt="KHCS 4" class="w-[90%] sm:w-auto h-auto sm:h-24 md:h-28 rounded-lg shadow-sm border border-gray-200 object-cover shrink-0 snap-center">
+                                    <img src="https://res.cloudinary.com/dhe7uziws/image/upload/v1776231540/vjsx0sqt6493hf4rc6wy.jpg" alt="KHCS 5" class="w-[90%] sm:w-auto h-auto sm:h-24 md:h-28 rounded-lg shadow-sm border border-gray-200 object-cover shrink-0 snap-center">
                                 </div>
 
-                                <!-- Nút sang phải -->
                                 <button onclick="document.getElementById('khcs-scroll-container').scrollBy({left: 200, behavior: 'smooth'})" 
                                     class="absolute right-[-12px] sm:right-[-16px] top-[40%] -translate-y-1/2 z-10 bg-white border border-gray-200 shadow-[0_2px_8px_rgba(0,0,0,0.15)] rounded-full p-1.5 text-[#003366] hover:bg-[#003366] hover:text-white transition-all focus:outline-none opacity-90 hover:opacity-100 flex items-center justify-center cursor-pointer">
                                     <i data-lucide="chevron-right" class="w-4 h-4 md:w-5 md:h-5"></i>
@@ -329,19 +305,10 @@
                             </div>
                         </div>
                         
-                        <!-- Video phần KHCS -->
                         <div class="mt-auto pt-2 border-t border-gray-100">
                             <div class="rounded-xl overflow-hidden shadow-sm border border-[#B8860B]/20 bg-[#F9F1E5] p-1 mt-2">
-                                <video 
-                                    controls 
-                                    autoplay 
-                                    muted 
-                                    loop 
-                                    playsinline
-                                    class="w-full h-auto max-h-[160px] sm:max-h-[180px] object-cover rounded-lg"
-                                >
+                                <video controls autoplay muted loop playsinline class="w-full h-auto max-h-[160px] sm:max-h-[180px] object-cover rounded-lg">
                                     <source src="https://res.cloudinary.com/dhe7uziws/video/upload/v1776233837/kxpc9ncmzm7tgxgcppus.mp4" type="video/mp4">
-                                    Trình duyệt của bạn không hỗ trợ thẻ video.
                                 </video>
                             </div>
                         </div>
@@ -353,7 +320,7 @@
                             <div class="w-10 h-10 md:w-14 md:h-14 rounded-full bg-[#B8860B] flex items-center justify-center text-white shadow-md shrink-0">
                                 <i data-lucide="megaphone" class="w-5 h-5 md:w-7 md:h-7"></i>
                             </div>
-                            <h3 class="font-extrabold text-[#003366] text-lg md:text-2xl">OMNI MKT</h3>
+                            <h3 class="font-extrabold text-[#003366] text-lg md:text-2xl uppercase">OMNI MKT</h3>
                         </div>
                         <div class="flex-1 flex flex-col">
                             <p class="text-xs sm:text-sm lg:text-base font-semibold text-gray-800 mb-3">Thiết kế KV/ Videos, adapt các hạng mục:</p>
@@ -361,28 +328,25 @@
                                 <li class="flex items-start gap-2 text-xs sm:text-sm lg:text-base text-gray-600"><i data-lucide="chevron-right" class="w-4 h-4 lg:w-5 lg:h-5 text-[#B8860B] mt-0.5 shrink-0"></i>TAB SALE tháng 3-4</li>
                                 <li class="flex items-start gap-2 text-xs sm:text-sm lg:text-base text-gray-600"><i data-lucide="chevron-right" class="w-4 h-4 lg:w-5 lg:h-5 text-[#B8860B] mt-0.5 shrink-0"></i>Chương Trình 8.3 và SN PNJ 38 năm</li>
                                 <li class="flex items-start gap-2 text-xs sm:text-sm lg:text-base text-gray-600"><i data-lucide="chevron-right" class="w-4 h-4 lg:w-5 lg:h-5 text-[#B8860B] mt-0.5 shrink-0"></i>Post livestream</li>
-                                <li class="flex items-start gap-2 text-xs sm:text-sm lg:text-base text-gray-600">
+                                <li class="flex items-start gap-2 text-xs sm:text-sm lg:text-base text-gray-600 italic">
                                     <i data-lucide="chevron-right" class="w-4 h-4 lg:w-5 lg:h-5 text-[#B8860B] mt-0.5 shrink-0"></i>
-                                    <span>PRODUCT DRIVEN<br/><span class="text-[10px] sm:text-xs lg:text-sm text-gray-500 italic">(TS Ý,  CZ, ECZ, TS cưới...)</span></span>
+                                    <span>PRODUCT DRIVEN<br/><span class="text-[10px] sm:text-xs lg:text-sm text-gray-500 uppercase">(TS Ý, CZ, ECZ, TS cưới...)</span></span>
                                 </li>
                             </ul>
                             
-                            <!-- Thư viện ảnh tham khảo dạng cuộn ngang có nút điều hướng -->
                             <div class="relative w-full mt-auto pt-2 group">
-                                <!-- Nút sang trái -->
                                 <button onclick="document.getElementById('omni-scroll-container').scrollBy({left: -200, behavior: 'smooth'})" 
                                     class="absolute left-[-12px] sm:left-[-16px] top-[40%] -translate-y-1/2 z-10 bg-white border border-gray-200 shadow-[0_2px_8px_rgba(0,0,0,0.15)] rounded-full p-1.5 text-[#003366] hover:bg-[#003366] hover:text-white transition-all focus:outline-none opacity-90 hover:opacity-100 flex items-center justify-center cursor-pointer">
                                     <i data-lucide="chevron-left" class="w-4 h-4 md:w-5 md:h-5"></i>
                                 </button>
 
-                                <div id="omni-scroll-container" class="w-full overflow-x-auto flex gap-3 pb-3 pt-1 px-1 custom-scrollbar-container scroll-smooth snap-x snap-mandatory">
-                                    <img src="https://res.cloudinary.com/dhe7uziws/image/upload/v1776234673/duduzjuzku8t3atle8aj.jpg" alt="OMNI MKT 1" class="h-20 sm:h-24 md:h-28 w-auto rounded-lg shadow-sm border border-gray-200 object-cover shrink-0 snap-center">
-                                    <img src="https://res.cloudinary.com/dhe7uziws/image/upload/v1776234673/gcbgpgv9cfhpwfsrvukg.jpg" alt="OMNI MKT 2" class="h-20 sm:h-24 md:h-28 w-auto rounded-lg shadow-sm border border-gray-200 object-cover shrink-0 snap-center">
-                                    <img src="https://res.cloudinary.com/dhe7uziws/image/upload/v1776234673/j1mevyvr46oww50m5doo.png" alt="OMNI MKT 3" class="h-20 sm:h-24 md:h-28 w-auto rounded-lg shadow-sm border border-gray-200 object-cover shrink-0 snap-center">
-                                    <img src="https://res.cloudinary.com/dhe7uziws/image/upload/v1776234673/udidjvedowqyq7aaackq.jpg" alt="OMNI MKT 4" class="h-20 sm:h-24 md:h-28 w-auto rounded-lg shadow-sm border border-gray-200 object-cover shrink-0 snap-center">
+                                <div id="omni-scroll-container" class="w-full overflow-x-auto flex gap-4 pb-3 pt-1 px-1 custom-scrollbar-container scroll-smooth snap-x snap-mandatory">
+                                    <img src="https://res.cloudinary.com/dhe7uziws/image/upload/v1776234673/duduzjuzku8t3atle8aj.jpg" alt="OMNI MKT 1" class="w-[90%] sm:w-auto h-auto sm:h-24 md:h-28 rounded-lg shadow-sm border border-gray-200 object-cover shrink-0 snap-center">
+                                    <img src="https://res.cloudinary.com/dhe7uziws/image/upload/v1776234673/gcbgpgv9cfhpwfsrvukg.jpg" alt="OMNI MKT 2" class="w-[90%] sm:w-auto h-auto sm:h-24 md:h-28 rounded-lg shadow-sm border border-gray-200 object-cover shrink-0 snap-center">
+                                    <img src="https://res.cloudinary.com/dhe7uziws/image/upload/v1776234673/j1mevyvr46oww50m5doo.png" alt="OMNI MKT 3" class="w-[90%] sm:w-auto h-auto sm:h-24 md:h-28 rounded-lg shadow-sm border border-gray-200 object-cover shrink-0 snap-center">
+                                    <img src="https://res.cloudinary.com/dhe7uziws/image/upload/v1776234673/udidjvedowqyq7aaackq.jpg" alt="OMNI MKT 4" class="w-[90%] sm:w-auto h-auto sm:h-24 md:h-28 rounded-lg shadow-sm border border-gray-200 object-cover shrink-0 snap-center">
                                 </div>
 
-                                <!-- Nút sang phải -->
                                 <button onclick="document.getElementById('omni-scroll-container').scrollBy({left: 200, behavior: 'smooth'})" 
                                     class="absolute right-[-12px] sm:right-[-16px] top-[40%] -translate-y-1/2 z-10 bg-white border border-gray-200 shadow-[0_2px_8px_rgba(0,0,0,0.15)] rounded-full p-1.5 text-[#003366] hover:bg-[#003366] hover:text-white transition-all focus:outline-none opacity-90 hover:opacity-100 flex items-center justify-center cursor-pointer">
                                     <i data-lucide="chevron-right" class="w-4 h-4 md:w-5 md:h-5"></i>
@@ -390,33 +354,16 @@
                             </div>
                         </div>
                         
-                        <!-- Video phần OMNI MKT -->
                         <div class="mt-auto pt-2 border-t border-gray-100">
                             <div class="grid grid-cols-2 gap-2 mt-2">
                                 <div class="rounded-xl overflow-hidden shadow-sm border border-[#B8860B]/20 bg-[#F9F1E5] p-1">
-                                    <video 
-                                        controls 
-                                        autoplay 
-                                        muted 
-                                        loop 
-                                        playsinline
-                                        class="w-full h-[160px] sm:h-[180px] object-cover rounded-lg"
-                                    >
+                                    <video controls autoplay muted loop playsinline class="w-full h-[160px] sm:h-[180px] object-cover rounded-lg">
                                         <source src="https://res.cloudinary.com/dhe7uziws/video/upload/v1776235016/t6df2rnnhlbu9sr5nsew.mp4" type="video/mp4">
-                                        Trình duyệt của bạn không hỗ trợ thẻ video.
                                     </video>
                                 </div>
                                 <div class="rounded-xl overflow-hidden shadow-sm border border-[#B8860B]/20 bg-[#F9F1E5] p-1">
-                                    <video 
-                                        controls 
-                                        autoplay 
-                                        muted 
-                                        loop 
-                                        playsinline
-                                        class="w-full h-[160px] sm:h-[180px] object-cover rounded-lg"
-                                    >
+                                    <video controls autoplay muted loop playsinline class="w-full h-[160px] sm:h-[180px] object-cover rounded-lg">
                                         <source src="https://res.cloudinary.com/dhe7uziws/video/upload/v1776234997/mq6kblmtqt15vmeqmmba.mp4" type="video/mp4">
-                                        Trình duyệt của bạn không hỗ trợ thẻ video.
                                     </video>
                                 </div>
                             </div>
@@ -429,24 +376,19 @@
                             <div class="w-10 h-10 md:w-14 md:h-14 rounded-full bg-[#9A161F] flex items-center justify-center text-white shadow-md shrink-0">
                                 <i data-lucide="star" class="w-5 h-5 md:w-7 md:h-7"></i>
                             </div>
-                            <h3 class="font-extrabold text-[#003366] text-lg md:text-2xl">CLHH</h3>
+                            <h3 class="font-extrabold text-[#003366] text-lg md:text-2xl uppercase">CLHH</h3>
                         </div>
-                        <div class="flex-1 flex flex-col">
-                            <p class="text-xs sm:text-sm lg:text-base font-semibold text-gray-800 mb-3">Sản xuất nội dung, Thiết kế KV, sản xuất videos các hạng mục:</p>
+                        <div class="flex-1 flex flex-col text-balance">
+                            <p class="text-xs sm:text-sm lg:text-base font-semibold text-gray-800 mb-3 uppercase tracking-tight leading-snug">Sản xuất nội dung, Thiết kế KV, sản xuất videos các hạng mục:</p>
                             <ul class="space-y-3 mb-4">
-                                <li class="flex items-start gap-2 text-xs sm:text-sm lg:text-base text-gray-600"><i data-lucide="chevron-right" class="w-4 h-4 lg:w-5 lg:h-5 text-[#B8860B] mt-0.5 shrink-0"></i>E- Brochure SN PNJ</li>
-                                <li class="flex items-start gap-2 text-xs sm:text-sm lg:text-base text-gray-600"><i data-lucide="chevron-right" class="w-4 h-4 lg:w-5 lg:h-5 text-[#B8860B] mt-0.5 shrink-0"></i>Sản xuất video onsite (109 sku)</li>
+                                <li class="flex items-start gap-2 text-xs sm:text-sm lg:text-base text-gray-600 uppercase"><i data-lucide="chevron-right" class="w-4 h-4 lg:w-5 lg:h-5 text-[#B8860B] mt-0.5 shrink-0"></i>E- Brochure SN PNJ</li>
+                                <li class="flex items-start gap-2 text-xs sm:text-sm lg:text-base text-gray-600 uppercase"><i data-lucide="chevron-right" class="w-4 h-4 lg:w-5 lg:h-5 text-[#B8860B] mt-0.5 shrink-0"></i>Sản xuất video onsite (109 sku)</li>
                             </ul>
                             
-                            <!-- E-Brochure Scrollable Image - Chiều cao tương đương tổng media của OMNI MKT -->
                             <div class="mt-auto pt-2 border-t border-gray-100">
                                 <div class="rounded-xl overflow-hidden shadow-sm border border-[#B8860B]/20 bg-[#F9F1E5] p-1 mt-2 h-[270px] sm:h-[310px] md:h-[330px]">
                                     <div class="h-full w-full overflow-y-auto rounded-lg bg-white shadow-inner custom-scrollbar-container">
-                                        <img 
-                                            src="https://res.cloudinary.com/dhe7uziws/image/upload/v1776227288/gqy8fgmobbspgdt1pl1h.png" 
-                                            alt="E-Brochure CLHH" 
-                                            class="w-full h-auto block"
-                                        >
+                                        <img src="https://res.cloudinary.com/dhe7uziws/image/upload/v1776227288/gqy8fgmobbspgdt1pl1h.png" alt="E-Brochure CLHH" class="w-full h-auto block">
                                     </div>
                                 </div>
                             </div>
@@ -459,36 +401,33 @@
                             <div class="w-10 h-10 md:w-14 md:h-14 rounded-full bg-[#003366] flex items-center justify-center text-white shadow-md shrink-0">
                                 <i data-lucide="handshake" class="w-5 h-5 md:w-7 md:h-7"></i>
                             </div>
-                            <h3 class="font-extrabold text-[#003366] text-lg md:text-2xl">PNS</h3>
+                            <h3 class="font-extrabold text-[#003366] text-lg md:text-2xl uppercase">PNS</h3>
                         </div>
                         <div class="flex-1 flex flex-col">
                             <ul class="space-y-4 sm:space-y-5 mb-4">
-                                <li class="flex items-start gap-3 md:gap-4 text-xs sm:text-sm lg:text-base text-gray-700 bg-gray-50 p-4 rounded-xl border border-gray-100">
+                                <li class="flex items-start gap-3 md:gap-4 text-xs sm:text-sm lg:text-base text-gray-700 bg-gray-50 p-4 rounded-xl border border-gray-100 text-balance uppercase tracking-tight">
                                     <i data-lucide="layers" class="w-5 h-5 md:w-6 md:h-6 text-[#B8860B] shrink-0 mt-0.5"></i>
                                     <span>Adapt <strong> trên 30 hạng mục</strong> Chương Trình 8.3 : standee Gitfzone, viettel,...</span>
                                 </li>
-                                <li class="flex items-start gap-3 md:gap-4 text-xs sm:text-sm lg:text-base text-gray-700 bg-gray-50 p-4 rounded-xl border border-gray-100">
+                                <li class="flex items-start gap-3 md:gap-4 text-xs sm:text-sm lg:text-base text-gray-700 bg-gray-50 p-4 rounded-xl border border-gray-100 text-balance uppercase tracking-tight">
                                     <i data-lucide="image" class="w-5 h-5 md:w-6 md:h-6 text-[#B8860B] shrink-0 mt-0.5"></i>
                                     <span>Design banner, Voucher Chương Trình 8.3 Năm thông qua ZMP</span>
                                 </li>
                             </ul>
                             
-                            <!-- Thư viện ảnh tham khảo dạng cuộn ngang có nút điều hướng -->
                             <div class="relative w-full mt-auto pt-2 group">
-                                <!-- Nút sang trái -->
                                 <button onclick="document.getElementById('pns-scroll-container').scrollBy({left: -200, behavior: 'smooth'})" 
                                     class="absolute left-[-12px] sm:left-[-16px] top-[40%] -translate-y-1/2 z-10 bg-white border border-gray-200 shadow-[0_2px_8px_rgba(0,0,0,0.15)] rounded-full p-1.5 text-[#003366] hover:bg-[#003366] hover:text-white transition-all focus:outline-none opacity-90 hover:opacity-100 flex items-center justify-center cursor-pointer">
                                     <i data-lucide="chevron-left" class="w-4 h-4 md:w-5 md:h-5"></i>
                                 </button>
 
-                                <div id="pns-scroll-container" class="w-full overflow-x-auto flex gap-3 pb-3 pt-1 px-1 custom-scrollbar-container scroll-smooth snap-x snap-mandatory">
-                                    <img src="https://res.cloudinary.com/dhe7uziws/image/upload/v1776237274/hgwpan5fzxsh5adnggqd.png" alt="PNS 1" class="h-20 sm:h-24 md:h-28 w-auto rounded-lg shadow-sm border border-gray-200 object-cover shrink-0 snap-center">
-                                    <img src="https://res.cloudinary.com/dhe7uziws/image/upload/v1776237272/gmrj3zqgm5nenbwozdpm.png" alt="PNS 2" class="h-20 sm:h-24 md:h-28 w-auto rounded-lg shadow-sm border border-gray-200 object-cover shrink-0 snap-center">
-                                    <img src="https://res.cloudinary.com/dhe7uziws/image/upload/v1776237272/rbe50nu8mlqjlzmkzyes.png" alt="PNS 3" class="h-20 sm:h-24 md:h-28 w-auto rounded-lg shadow-sm border border-gray-200 object-cover shrink-0 snap-center">
-                                    <img src="https://res.cloudinary.com/dhe7uziws/image/upload/v1776237273/rsofnruaztrerkkj8s5q.png" alt="PNS 4" class="h-20 sm:h-24 md:h-28 w-auto rounded-lg shadow-sm border border-gray-200 object-cover shrink-0 snap-center">
+                                <div id="pns-scroll-container" class="w-full overflow-x-auto flex gap-4 pb-3 pt-1 px-1 custom-scrollbar-container scroll-smooth snap-x snap-mandatory">
+                                    <img src="https://res.cloudinary.com/dhe7uziws/image/upload/v1776237274/hgwpan5fzxsh5adnggqd.png" alt="PNS 1" class="w-[90%] sm:w-auto h-auto sm:h-24 md:h-28 rounded-lg shadow-sm border border-gray-200 object-cover shrink-0 snap-center">
+                                    <img src="https://res.cloudinary.com/dhe7uziws/image/upload/v1776237272/gmrj3zqgm5nenbwozdpm.png" alt="PNS 2" class="w-[90%] sm:w-auto h-auto sm:h-24 md:h-28 rounded-lg shadow-sm border border-gray-200 object-cover shrink-0 snap-center">
+                                    <img src="https://res.cloudinary.com/dhe7uziws/image/upload/v1776237272/rbe50nu8mlqjlzmkzyes.png" alt="PNS 3" class="w-[90%] sm:w-auto h-auto sm:h-24 md:h-28 rounded-lg shadow-sm border border-gray-200 object-cover shrink-0 snap-center">
+                                    <img src="https://res.cloudinary.com/dhe7uziws/image/upload/v1776237273/rsofnruaztrerkkj8s5q.png" alt="PNS 4" class="w-[90%] sm:w-auto h-auto sm:h-24 md:h-28 rounded-lg shadow-sm border border-gray-200 object-cover shrink-0 snap-center">
                                 </div>
 
-                                <!-- Nút sang phải -->
                                 <button onclick="document.getElementById('pns-scroll-container').scrollBy({left: 200, behavior: 'smooth'})" 
                                     class="absolute right-[-12px] sm:right-[-16px] top-[40%] -translate-y-1/2 z-10 bg-white border border-gray-200 shadow-[0_2px_8px_rgba(0,0,0,0.15)] rounded-full p-1.5 text-[#003366] hover:bg-[#003366] hover:text-white transition-all focus:outline-none opacity-90 hover:opacity-100 flex items-center justify-center cursor-pointer">
                                     <i data-lucide="chevron-right" class="w-4 h-4 md:w-5 md:h-5"></i>
@@ -503,33 +442,30 @@
                             <div class="w-10 h-10 md:w-14 md:h-14 rounded-full bg-[#003366] flex items-center justify-center text-white shadow-md shrink-0">
                                 <i data-lucide="shopping-bag" class="w-5 h-5 md:w-7 md:h-7"></i>
                             </div>
-                            <h3 class="font-extrabold text-[#003366] text-lg md:text-2xl">RETAIL MKT</h3>
+                            <h3 class="font-extrabold text-[#003366] text-lg md:text-2xl uppercase tracking-tight">RETAIL MKT</h3>
                         </div>
                         <div class="bg-gray-50 p-4 lg:p-5 rounded-xl border border-gray-100 flex-1 flex flex-col justify-between">
                             <div class="flex items-start gap-3 md:gap-4 text-xs sm:text-sm lg:text-base text-gray-700 mb-4">
                                 <i data-lucide="printer" class="w-6 h-6 lg:w-8 lg:h-8 text-[#B8860B] shrink-0 mt-1"></i>
-                                <p class="leading-relaxed text-balance">
+                                <p class="leading-relaxed text-balance uppercase tracking-tight">
                                     Adapt <strong class="text-[#9A161F] text-sm md:text-base lg:text-lg"> 60 hạng mục</strong> CT SN PNJ từ master KV cho các sub- brand.
                                 </p>
                             </div>
                             
-                            <!-- Thư viện ảnh tham khảo dạng cuộn ngang có nút điều hướng -->
                             <div class="relative w-full mt-2 group">
-                                <!-- Nút sang trái -->
                                 <button onclick="document.getElementById('retail-scroll-container').scrollBy({left: -200, behavior: 'smooth'})" 
                                     class="absolute left-[-12px] sm:left-[-16px] top-[40%] -translate-y-1/2 z-10 bg-white border border-gray-200 shadow-[0_2px_8px_rgba(0,0,0,0.15)] rounded-full p-1.5 text-[#003366] hover:bg-[#003366] hover:text-white transition-all focus:outline-none opacity-90 hover:opacity-100 flex items-center justify-center cursor-pointer">
                                     <i data-lucide="chevron-left" class="w-4 h-4 md:w-5 md:h-5"></i>
                                 </button>
 
-                                <div id="retail-scroll-container" class="w-full overflow-x-auto flex gap-3 pb-3 pt-1 px-1 custom-scrollbar-container scroll-smooth snap-x snap-mandatory">
-                                    <img src="https://res.cloudinary.com/dhe7uziws/image/upload/v1776229692/fgzphmxwqxxv37xrmtrs.jpg" alt="Retail POSM 1" class="h-20 sm:h-24 md:h-28 w-auto rounded-lg shadow-sm border border-gray-200 object-cover shrink-0 snap-center">
-                                    <img src="https://res.cloudinary.com/dhe7uziws/image/upload/v1776229692/gamu9bx1v79jnsr8djle.jpg" alt="Retail POSM 2" class="h-20 sm:h-24 md:h-28 w-auto rounded-lg shadow-sm border border-gray-200 object-cover shrink-0 snap-center">
-                                    <img src="https://res.cloudinary.com/dhe7uziws/image/upload/v1776229692/mfcchmyas9mh2xc45chf.jpg" alt="Retail POSM 3" class="h-20 sm:h-24 md:h-28 w-auto rounded-lg shadow-sm border border-gray-200 object-cover shrink-0 snap-center">
-                                    <img src="https://res.cloudinary.com/dhe7uziws/image/upload/v1776229692/u3wwx6elgekf6lvzcwkx.jpg" alt="Retail POSM 4" class="h-20 sm:h-24 md:h-28 w-auto rounded-lg shadow-sm border border-gray-200 object-cover shrink-0 snap-center">
-                                    <img src="https://res.cloudinary.com/dhe7uziws/image/upload/v1776229692/cagvzw95wqgs4wrf4wil.jpg" alt="Retail POSM 5" class="h-20 sm:h-24 md:h-28 w-auto rounded-lg shadow-sm border border-gray-200 object-cover shrink-0 snap-center">
+                                <div id="retail-scroll-container" class="w-full overflow-x-auto flex gap-4 pb-3 pt-1 px-1 custom-scrollbar-container scroll-smooth snap-x snap-mandatory">
+                                    <img src="https://res.cloudinary.com/dhe7uziws/image/upload/v1776229692/fgzphmxwqxxv37xrmtrs.jpg" alt="Retail POSM 1" class="w-[90%] sm:w-auto h-auto sm:h-24 md:h-28 rounded-lg shadow-sm border border-gray-200 object-cover shrink-0 snap-center">
+                                    <img src="https://res.cloudinary.com/dhe7uziws/image/upload/v1776229692/gamu9bx1v79jnsr8djle.jpg" alt="Retail POSM 2" class="w-[90%] sm:w-auto h-auto sm:h-24 md:h-28 rounded-lg shadow-sm border border-gray-200 object-cover shrink-0 snap-center">
+                                    <img src="https://res.cloudinary.com/dhe7uziws/image/upload/v1776229692/mfcchmyas9mh2xc45chf.jpg" alt="Retail POSM 3" class="w-[90%] sm:w-auto h-auto sm:h-24 md:h-28 rounded-lg shadow-sm border border-gray-200 object-cover shrink-0 snap-center">
+                                    <img src="https://res.cloudinary.com/dhe7uziws/image/upload/v1776229692/u3wwx6elgekf6lvzcwkx.jpg" alt="Retail POSM 4" class="w-[90%] sm:w-auto h-auto sm:h-24 md:h-28 rounded-lg shadow-sm border border-gray-200 object-cover shrink-0 snap-center">
+                                    <img src="https://res.cloudinary.com/dhe7uziws/image/upload/v1776229692/cagvzw95wqgs4wrf4wil.jpg" alt="Retail POSM 5" class="w-[90%] sm:w-auto h-auto sm:h-24 md:h-28 rounded-lg shadow-sm border border-gray-200 object-cover shrink-0 snap-center">
                                 </div>
 
-                                <!-- Nút sang phải -->
                                 <button onclick="document.getElementById('retail-scroll-container').scrollBy({left: 200, behavior: 'smooth'})" 
                                     class="absolute right-[-12px] sm:right-[-16px] top-[40%] -translate-y-1/2 z-10 bg-white border border-gray-200 shadow-[0_2px_8px_rgba(0,0,0,0.15)] rounded-full p-1.5 text-[#003366] hover:bg-[#003366] hover:text-white transition-all focus:outline-none opacity-90 hover:opacity-100 flex items-center justify-center cursor-pointer">
                                     <i data-lucide="chevron-right" class="w-4 h-4 md:w-5 md:h-5"></i>
@@ -544,35 +480,32 @@
                             <div class="w-10 h-10 md:w-14 md:h-14 rounded-full bg-[#B8860B] flex items-center justify-center text-white shadow-md shrink-0">
                                 <i data-lucide="heart-handshake" class="w-5 h-5 md:w-7 md:h-7"></i>
                             </div>
-                            <h3 class="font-extrabold text-[#003366] text-lg md:text-2xl">CX - CS</h3>
+                            <h3 class="font-extrabold text-[#003366] text-lg md:text-2xl uppercase tracking-tight">CX - CS</h3>
                         </div>
                         <div class="flex-1 flex flex-col justify-between">
                             <ul class="space-y-4 sm:space-y-6 mb-4">
-                                <li class="text-xs sm:text-sm lg:text-base text-gray-700 border-l-4 border-[#B8860B] pl-4">
+                                <li class="text-xs sm:text-sm lg:text-base text-gray-700 border-l-4 border-[#B8860B] pl-4 uppercase tracking-tight">
                                     <strong class="text-[#003366]">CX:</strong> Thiết kế 23 thông báo, chụp ảnh, video recap event, workshop 8.3 
                                 </li>
-                                <li class="text-xs sm:text-sm lg:text-base text-gray-700 border-l-4 border-[#9A161F] pl-4">
+                                <li class="text-xs sm:text-sm lg:text-base text-gray-700 border-l-4 border-[#9A161F] pl-4 uppercase tracking-tight">
                                     <strong class="text-[#9A161F]">CS:</strong> Thiết kế thông báo, standee cho chính sách giá bán, thu đổi, ...
                                 </li>
                             </ul>
                             
-                            <!-- Thư viện ảnh/video tham khảo dạng cuộn ngang có nút điều hướng -->
                             <div class="relative w-full mt-2 group">
-                                <!-- Nút sang trái -->
                                 <button onclick="document.getElementById('cxcs-scroll-container').scrollBy({left: -200, behavior: 'smooth'})" 
                                     class="absolute left-[-12px] sm:left-[-16px] top-[40%] -translate-y-1/2 z-10 bg-white border border-gray-200 shadow-[0_2px_8px_rgba(0,0,0,0.15)] rounded-full p-1.5 text-[#003366] hover:bg-[#003366] hover:text-white transition-all focus:outline-none opacity-90 hover:opacity-100 flex items-center justify-center cursor-pointer">
                                     <i data-lucide="chevron-left" class="w-4 h-4 md:w-5 md:h-5"></i>
                                 </button>
 
-                                <div id="cxcs-scroll-container" class="w-full overflow-x-auto flex gap-3 pb-3 pt-1 px-1 custom-scrollbar-container scroll-smooth snap-x snap-mandatory">
-                                    <video controls autoplay muted loop playsinline class="h-20 sm:h-24 md:h-28 w-auto rounded-lg shadow-sm border border-gray-200 object-cover shrink-0 snap-center">
+                                <div id="cxcs-scroll-container" class="w-full overflow-x-auto flex gap-4 pb-3 pt-1 px-1 custom-scrollbar-container scroll-smooth snap-x snap-mandatory">
+                                    <video controls autoplay muted loop playsinline class="w-[90%] sm:w-auto h-[160px] sm:h-24 md:h-28 rounded-lg shadow-sm border border-gray-200 object-cover shrink-0 snap-center">
                                         <source src="https://res.cloudinary.com/dhe7uziws/video/upload/v1776236765/fxv8fj0pv75rnvxmj4yr.mp4" type="video/mp4">
                                     </video>
-                                    <img src="https://res.cloudinary.com/dhe7uziws/image/upload/v1776236668/dbte4gcksk5p65qyynpe.png" alt="CXCS 1" class="h-20 sm:h-24 md:h-28 w-auto rounded-lg shadow-sm border border-gray-200 object-cover shrink-0 snap-center">
-                                    <img src="https://res.cloudinary.com/dhe7uziws/image/upload/v1776237280/umztrcdhhdzuabahq89g.jpg" alt="CXCS 2" class="h-20 sm:h-24 md:h-28 w-auto rounded-lg shadow-sm border border-gray-200 object-cover shrink-0 snap-center">
+                                    <img src="https://res.cloudinary.com/dhe7uziws/image/upload/v1776236668/dbte4gcksk5p65qyynpe.png" alt="CXCS 1" class="w-[90%] sm:w-auto h-auto sm:h-24 md:h-28 rounded-lg shadow-sm border border-gray-200 object-cover shrink-0 snap-center">
+                                    <img src="https://res.cloudinary.com/dhe7uziws/image/upload/v1776237280/umztrcdhhdzuabahq89g.jpg" alt="CXCS 2" class="w-[90%] sm:w-auto h-auto sm:h-24 md:h-28 rounded-lg shadow-sm border border-gray-200 object-cover shrink-0 snap-center">
                                 </div>
 
-                                <!-- Nút sang phải -->
                                 <button onclick="document.getElementById('cxcs-scroll-container').scrollBy({left: 200, behavior: 'smooth'})" 
                                     class="absolute right-[-12px] sm:right-[-16px] top-[40%] -translate-y-1/2 z-10 bg-white border border-gray-200 shadow-[0_2px_8px_rgba(0,0,0,0.15)] rounded-full p-1.5 text-[#003366] hover:bg-[#003366] hover:text-white transition-all focus:outline-none opacity-90 hover:opacity-100 flex items-center justify-center cursor-pointer">
                                     <i data-lucide="chevron-right" class="w-4 h-4 md:w-5 md:h-5"></i>
@@ -585,12 +518,9 @@
             </div>
         </div>
         
-        <!-- ========================================== -->
-        <!-- MÀN HÌNH 3: PRODUCT POWERHOUSE (MỚI THÊM) -->
-        <!-- ========================================== -->
+        <!-- MÀN HÌNH 3: PRODUCT POWERHOUSE -->
         <div id="main-product-powerhouse" class="main-tab-panel hidden fade-in-section">
             
-            <!-- Header Section -->
             <div class="text-center mb-8 md:mb-14">
                 <div class="relative inline-block mb-3 md:mb-6">
                     <h2 class="font-serif-vi text-2xl sm:text-4xl md:text-5xl lg:text-6xl text-[#9A161F] font-bold drop-shadow-lg relative z-10 px-2 leading-tight uppercase">
@@ -599,7 +529,7 @@
                     <div class="absolute -bottom-1 md:-bottom-2 left-[10%] right-[10%] h-2 md:h-4 bg-[#B8860B]/20 rounded-full blur-md -z-10"></div>
                 </div>
                 
-                <p class="font-serif-vi text-[#003366] text-sm md:text-base lg:text-lg tracking-wide italic mt-2 mb-4 font-bold">
+                <p class="font-serif-vi text-[#003366] text-sm md:text-base lg:text-lg tracking-wide italic mt-2 mb-4 font-bold uppercase tracking-widest">
                     TỐI ƯU QUY TRÌNH SẢN XUẤT HÌNH ẢNH
                 </p>
                 
@@ -611,16 +541,14 @@
                     </div>
                 </div>
                 
-                <p class="font-sans-vi text-gray-600 text-sm md:text-lg lg:text-xl max-w-3xl mx-auto px-4 leading-relaxed text-balance">
+                <p class="font-sans-vi text-gray-600 text-sm md:text-lg lg:text-xl max-w-3xl mx-auto px-4 leading-relaxed text-balance text-center uppercase tracking-tight">
                     <span class="font-semibold text-[#003366]">Nâng cấp hình ảnh sản phẩm mới:</span>  <span class="font-semibold text-[#9A161F]">Tăng tỷ lệ chuyển đổi mua hàng</span>.
                 </p>
             </div>
 
-            <!-- Content Panel: 1 Column -->
             <div class="relative z-10 max-w-4xl mx-auto pb-8">
                 <div class="grid grid-cols-1 gap-6 lg:gap-8 items-stretch">
                     
-                    <!-- Tiến Độ Sản Xuất -->
                     <div class="glass-panel rounded-2xl md:rounded-3xl overflow-hidden shadow-xl border border-gray-100 flex flex-col h-full hover:-translate-y-1 transition-transform duration-300">
                         <div class="p-5 sm:p-8 md:p-10 bg-white flex flex-col justify-center flex-1">
                             <div class="text-center mb-8 md:mb-10">
@@ -631,25 +559,23 @@
                             </div>
                             <div class="grid grid-cols-1 gap-6 lg:gap-8">
                                 
-                                <!-- Item 1: Hình ảnh sản phẩm -->
                                 <div class="flex flex-col p-4 lg:p-6 rounded-xl bg-gray-50 border border-gray-100 transition-colors hover:bg-blue-50/30 gap-4 shadow-sm">
                                     <div class="flex flex-col sm:flex-row items-center justify-between gap-4 w-full">
                                         <div class="flex items-center gap-3 md:gap-4 w-full sm:w-1/3">
                                             <div class="bg-white p-2.5 rounded-lg shadow-sm shrink-0 border border-gray-100"><i data-lucide="image" class="w-5 h-5 md:w-6 md:h-6 text-blue-800"></i></div>
                                             <div>
-                                                <p class="text-gray-800 font-bold text-sm sm:text-base leading-tight">Hình ảnh sản phẩm</p>
+                                                <p class="text-gray-800 font-bold text-sm sm:text-base leading-tight uppercase tracking-tight">Hình ảnh sản phẩm</p>
                                             </div>
                                         </div>
                                         <div class="w-full sm:w-1/3 flex flex-col items-start sm:items-center border-t sm:border-t-0 sm:border-l border-gray-200 pt-3 sm:pt-0 sm:pl-4">
                                             <span class="text-[10px] sm:text-xs text-[#003366] font-bold uppercase tracking-wider mb-1">Target 2026 (dự kiến)</span>
-                                            <div class="text-[#003366]"><span class="font-serif-vi font-bold text-2xl md:text-3xl">7.000</span> <span class="text-xs font-medium">SKU</span></div>
+                                            <div class="text-[#003366]"><span class="font-serif-vi font-bold text-2xl md:text-3xl">7.000</span> <span class="text-xs font-medium uppercase">SKU</span></div>
                                         </div>
                                         <div class="w-full sm:w-1/3 flex flex-col items-start sm:items-end border-t sm:border-t-0 sm:border-l border-gray-200 pt-3 sm:pt-0 sm:pl-4 text-left sm:text-right">
                                             <span class="text-[10px] sm:text-xs text-[#003366] font-bold uppercase tracking-wider mb-1">Đã chụp (Hiện tại)</span>
-                                            <div class="text-[#003366]"><span class="font-serif-vi font-bold text-2xl md:text-3xl">2.133</span> <span class="text-xs font-medium">SKU</span></div>
+                                            <div class="text-[#003366]"><span class="font-serif-vi font-bold text-2xl md:text-3xl">2.133</span> <span class="text-xs font-medium uppercase">SKU</span></div>
                                         </div>
                                     </div>
-                                    <!-- Progress Bar -->
                                     <div class="w-full mt-2 border-t border-gray-100 pt-4">
                                         <div class="flex justify-between items-end mb-2">
                                             <span class="text-[10px] sm:text-xs font-bold text-[#003366] uppercase tracking-wider">Tiến độ</span>
@@ -663,25 +589,23 @@
                                     </div>
                                 </div>
 
-                                <!-- Item 2: Video 360 độ -->
                                 <div class="flex flex-col p-4 lg:p-6 rounded-xl bg-gray-50 border border-gray-100 transition-colors hover:bg-amber-50/30 gap-4 shadow-sm">
                                     <div class="flex flex-col sm:flex-row items-center justify-between gap-4 w-full">
                                         <div class="flex items-center gap-3 md:gap-4 w-full sm:w-1/3">
                                             <div class="bg-white p-2.5 rounded-lg shadow-sm shrink-0 border border-gray-100"><i data-lucide="rotate-3d" class="w-5 h-5 md:w-6 md:h-6 text-[#B8860B]"></i></div>
                                             <div>
-                                                <p class="text-gray-800 font-bold text-sm sm:text-base leading-tight">Video 360 độ</p>
+                                                <p class="text-gray-800 font-bold text-sm sm:text-base leading-tight uppercase tracking-tight">Video 360 độ</p>
                                             </div>
                                         </div>
                                         <div class="w-full sm:w-1/3 flex flex-col items-start sm:items-center border-t sm:border-t-0 sm:border-l border-gray-200 pt-3 sm:pt-0 sm:pl-4">
                                             <span class="text-[10px] sm:text-xs text-[#003366] font-bold uppercase tracking-wider mb-1">Target 2026 (dự kiến)</span>
-                                            <div class="text-[#003366]"><span class="font-serif-vi font-bold text-2xl md:text-3xl">480</span> <span class="text-xs font-medium">SKU</span></div>
+                                            <div class="text-[#003366]"><span class="font-serif-vi font-bold text-2xl md:text-3xl">480</span> <span class="text-xs font-medium uppercase">SKU</span></div>
                                         </div>
                                         <div class="w-full sm:w-1/3 flex flex-col items-start sm:items-end border-t sm:border-t-0 sm:border-l border-gray-200 pt-3 sm:pt-0 sm:pl-4 text-left sm:text-right">
                                             <span class="text-[10px] sm:text-xs text-[#B8860B] font-bold uppercase tracking-wider mb-1">Đã quay (Hiện tại)</span>
-                                            <div class="text-[#B8860B]"><span class="font-serif-vi font-bold text-2xl md:text-3xl">187</span> <span class="text-xs font-medium">SKU</span></div>
+                                            <div class="text-[#B8860B]"><span class="font-serif-vi font-bold text-2xl md:text-3xl">187</span> <span class="text-xs font-medium uppercase">SKU</span></div>
                                         </div>
                                     </div>
-                                    <!-- Progress Bar -->
                                     <div class="w-full mt-2 border-t border-gray-100 pt-4">
                                         <div class="flex justify-between items-end mb-2">
                                             <span class="text-[10px] sm:text-xs font-bold text-[#003366] uppercase tracking-wider">Tiến độ</span>
@@ -695,29 +619,27 @@
                                     </div>
                                 </div>
 
-                                <!-- Item 3: Video Review -->
                                 <div class="flex flex-col p-4 lg:p-6 rounded-xl bg-red-50/50 border border-red-100 transition-colors gap-4 shadow-sm">
                                     <div class="flex flex-col sm:flex-row items-center justify-between gap-4 w-full">
                                         <div class="flex items-center gap-3 md:gap-4 w-full sm:w-1/3">
                                             <div class="bg-white p-2.5 rounded-lg shadow-sm shrink-0 border border-red-100"><i data-lucide="play-circle" class="w-5 h-5 md:w-6 md:h-6 text-[#9A161F]"></i></div>
                                             <div>
-                                                <p class="text-gray-800 font-bold text-sm sm:text-base leading-tight">Video Review</p>
+                                                <p class="text-gray-800 font-bold text-sm sm:text-base leading-tight uppercase tracking-tight">Video Review</p>
                                             </div>
                                         </div>
                                         <div class="w-full sm:w-1/3 flex flex-col items-start sm:items-center border-t sm:border-t-0 sm:border-l border-red-200 pt-3 sm:pt-0 sm:pl-4">
                                             <span class="text-[10px] sm:text-xs text-[#003366] font-bold uppercase tracking-wider mb-1">Target 2026 (dự kiến)</span>
-                                            <div class="text-[#003366]"><span class="font-serif-vi font-bold text-2xl md:text-3xl">400</span> <span class="text-xs font-medium">SKU</span></div>
+                                            <div class="text-[#003366]"><span class="font-serif-vi font-bold text-2xl md:text-3xl">400</span> <span class="text-xs font-medium uppercase">SKU</span></div>
                                         </div>
                                         <div class="w-full sm:w-1/3 flex flex-col items-start sm:items-end border-t sm:border-t-0 sm:border-l border-red-200 pt-3 sm:pt-0 sm:pl-4 text-left sm:text-right">
                                             <span class="text-[10px] sm:text-xs text-[#9A161F] font-bold uppercase tracking-wider mb-1">Đã quay (Hiện tại)</span>
-                                            <div class="text-[#9A161F]"><span class="font-serif-vi font-bold text-2xl md:text-3xl">400</span> <span class="text-xs font-medium">SKU</span></div>
+                                            <div class="text-[#9A161F]"><span class="font-serif-vi font-bold text-2xl md:text-3xl">400</span> <span class="text-xs font-medium uppercase">SKU</span></div>
                                         </div>
                                     </div>
-                                    <!-- Progress Bar -->
                                     <div class="w-full mt-2 border-t border-red-100 pt-4">
                                         <div class="flex justify-between items-end mb-2">
                                             <span class="text-[10px] sm:text-xs font-bold text-[#003366] uppercase tracking-wider">Tiến độ</span>
-                                            <span class="text-sm md:text-base font-bold text-green-600">Đạt 100%</span>
+                                            <span class="text-sm md:text-base font-bold text-green-600 uppercase">Đạt 100%</span>
                                         </div>
                                         <div class="w-full bg-gray-200 rounded-full h-3 md:h-4 overflow-hidden shadow-inner">
                                             <div class="bg-gradient-to-r from-[#9A161F] to-red-600 h-full rounded-full transition-all duration-1000 ease-out relative" style="width: 100%">
@@ -734,7 +656,7 @@
                 </div>
             </div>
 
-            <!-- KHU VỰC THÊM MỚI: TỐI ƯU QUY TRÌNH SẢN XUẤT HÌNH ẢNH -->
+            <!-- QUY TRÌNH SẢN XUẤT HÌNH ẢNH -->
             <div class="relative z-10 max-w-6xl mx-auto pt-4 pb-12">
                 <div class="text-center mb-8 border-t border-dashed border-gray-300 pt-10 mt-6">
                     <h3 class="font-serif-vi text-xl sm:text-2xl md:text-3xl lg:text-4xl text-[#003366] font-extrabold uppercase tracking-widest inline-block relative drop-shadow-sm">
@@ -743,90 +665,85 @@
                     </h3>
                 </div>
                 
-                <!-- NỘI DUNG SO SÁNH QUY TRÌNH -->
                 <div id="toi-uu-quy-trinh-content" class="w-full mt-8 md:mt-12 px-4 sm:px-0">
                     
                     <div class="grid grid-cols-1 md:grid-cols-2 gap-6 md:gap-10 lg:gap-16 mb-10 relative">
-                        <!-- Mũi tên chỉ hướng cho Desktop -->
                         <div class="hidden md:flex absolute left-1/2 top-[40%] -translate-x-1/2 -translate-y-1/2 z-20 w-12 h-12 bg-white border border-gray-200 rounded-full items-center justify-center shadow-lg">
                             <i data-lucide="arrow-right" class="w-6 h-6 text-[#B8860B]"></i>
                         </div>
 
-                        <!-- QUY TRÌNH CŨ -->
+                        <!-- CŨ -->
                         <div class="bg-gray-50 rounded-3xl border border-gray-200 p-6 sm:p-8 flex flex-col items-center text-center shadow-sm relative">
                             <div class="w-14 h-14 bg-gray-200 rounded-full flex items-center justify-center mb-5">
                                 <i data-lucide="history" class="w-7 h-7 text-gray-500"></i>
                             </div>
-                            <h4 class="font-bold text-gray-500 uppercase tracking-widest mb-6">Quy trình cũ</h4>
+                            <h4 class="font-bold text-gray-500 uppercase tracking-widest mb-6 uppercase">Quy trình cũ</h4>
                             
                             <div class="w-full space-y-4">
                                 <div class="bg-white p-5 rounded-2xl border border-gray-100 shadow-sm flex flex-col items-center">
-                                    <span class="text-xs text-gray-500 font-bold uppercase mb-2">Thời gian sản xuất</span>
+                                    <span class="text-xs text-gray-500 font-bold uppercase mb-2 uppercase">Thời gian sản xuất</span>
                                     <div class="flex items-baseline gap-1.5 text-gray-600">
-                                        <span class="text-sm font-medium mr-1">Mất</span>
+                                        <span class="text-sm font-medium mr-1 uppercase uppercase">Mất</span>
                                         <span class="font-serif-vi text-4xl font-bold text-gray-700">14</span>
-                                        <span class="font-medium text-sm">ngày</span>
+                                        <span class="font-medium text-sm uppercase uppercase tracking-tight">ngày</span>
                                     </div>
-                                    <span class="text-[11px] italic text-gray-400 mt-1">(chụp ảnh + retouch)</span>
+                                    <span class="text-[11px] italic text-gray-400 mt-1 uppercase tracking-tight">(chụp ảnh + retouch)</span>
                                 </div>
                                 <div class="bg-white p-5 rounded-2xl border border-gray-100 shadow-sm flex flex-col items-center">
-                                    <span class="text-xs text-gray-500 font-bold uppercase mb-2">Số lượng sản xuất</span>
+                                    <span class="text-xs text-gray-500 font-bold uppercase mb-2 uppercase tracking-tight">Số lượng sản xuất</span>
                                     <div class="flex items-baseline gap-1.5 text-gray-600">
                                         <span class="font-serif-vi text-4xl font-bold text-gray-700">120</span>
-                                        <span class="font-medium text-sm">SKU</span>
+                                        <span class="font-medium text-sm uppercase tracking-tight">SKU</span>
                                     </div>
                                 </div>
                             </div>
                         </div>
 
-                        <!-- QUY TRÌNH MỚI -->
+                        <!-- MỚI -->
                         <div class="bg-gradient-to-b from-[#F9F1E5] to-white rounded-3xl border border-[#B8860B]/40 p-6 sm:p-8 flex flex-col items-center text-center shadow-xl relative transform md:scale-105 transition-transform z-10">
-                            <div class="absolute -top-4 -right-2 md:-right-4 bg-[#9A161F] text-white text-xs font-bold px-3 py-1.5 rounded-full shadow-md animate-pulse uppercase tracking-wider">
+                            <div class="absolute -top-4 -right-2 md:-right-4 bg-[#9A161F] text-white text-xs font-bold px-3 py-1.5 rounded-full shadow-md animate-pulse uppercase tracking-wider uppercase">
                                 Tối ưu hơn!
                             </div>
                             <div class="w-14 h-14 bg-[#003366] rounded-full flex items-center justify-center mb-5 shadow-md">
                                 <i data-lucide="zap" class="w-7 h-7 text-white"></i>
                             </div>
-                            <h4 class="font-bold text-[#003366] uppercase tracking-widest mb-6">Quy trình mới</h4>
+                            <h4 class="font-bold text-[#003366] uppercase tracking-widest mb-6 uppercase">Quy trình mới</h4>
                             
                             <div class="w-full space-y-4">
                                 <div class="bg-white p-5 rounded-2xl border border-[#B8860B]/30 shadow-md flex flex-col items-center">
-                                    <span class="text-xs text-[#003366] font-bold uppercase mb-2">Thời gian sản xuất</span>
+                                    <span class="text-xs text-[#003366] font-bold uppercase mb-2 uppercase tracking-tight leading-snug">Thời gian sản xuất</span>
                                     <div class="flex items-baseline gap-1.5 text-[#003366]">
-                                        <span class="text-sm font-medium mr-1">Chỉ</span>
+                                        <span class="text-sm font-medium mr-1 uppercase tracking-tight">Chỉ</span>
                                         <span class="font-serif-vi text-5xl font-bold">10</span>
-                                        <span class="font-medium text-sm">ngày</span>
+                                        <span class="font-medium text-sm uppercase tracking-tight">ngày</span>
                                     </div>
-                                    <span class="text-[11px] italic text-gray-500 mt-1">(chụp ảnh + retouch)</span>
+                                    <span class="text-[11px] italic text-gray-500 mt-1 uppercase tracking-tight leading-snug">(chụp ảnh + retouch)</span>
                                 </div>
                                 <div class="bg-white p-5 rounded-2xl border border-[#B8860B]/30 shadow-md flex flex-col items-center">
-                                    <span class="text-xs text-[#003366] font-bold uppercase mb-2">Số lượng sản xuất</span>
+                                    <span class="text-xs text-[#003366] font-bold uppercase mb-2 uppercase tracking-tight leading-snug text-balance text-center">Số lượng sản xuất</span>
                                     <div class="flex items-baseline gap-1.5 text-[#9A161F]">
                                         <span class="font-serif-vi text-5xl font-bold">160</span>
-                                        <span class="font-medium text-sm">SKU</span>
+                                        <span class="font-medium text-sm uppercase tracking-tight">SKU</span>
                                     </div>
                                 </div>
                             </div>
                         </div>
                     </div>
 
-                    <!-- KẾT LUẬN ĐƯỢC HIGHLIGHT NỔI BẬT -->
                     <div class="max-w-4xl mx-auto mt-8 mb-4 relative">
-                        <!-- Ánh sáng nền (Glow effect) đằng sau để làm nổi bật -->
                         <div class="absolute -inset-1 bg-gradient-to-r from-emerald-400 via-[#B8860B] to-emerald-400 rounded-[2rem] blur opacity-40 animate-pulse"></div>
                         
                         <div class="bg-gradient-to-r from-emerald-50 via-white to-emerald-50 border-2 border-emerald-400 rounded-2xl p-6 md:p-8 shadow-2xl flex flex-col md:flex-row items-center gap-6 justify-center text-center md:text-left relative overflow-hidden transform hover:-translate-y-2 transition-transform duration-300">
-                            <!-- Background decoration -->
                             <i data-lucide="trending-up" class="absolute -right-4 -bottom-4 w-32 h-32 text-emerald-100 opacity-60 -z-0 transform -rotate-12"></i>
                             
                             <div class="flex-shrink-0 bg-white p-4 rounded-full shadow-lg border border-emerald-200 relative z-10">
                                 <i data-lucide="award" class="w-10 h-10 md:w-12 md:h-12 text-emerald-600"></i>
                             </div>
                             <div class="relative z-10">
-                                <div class="inline-block bg-emerald-100 text-emerald-800 text-xs font-bold px-3 py-1 rounded-full uppercase tracking-widest mb-3 border border-emerald-200 shadow-sm">
+                                <div class="inline-block bg-emerald-100 text-emerald-800 text-xs font-bold px-3 py-1 rounded-full uppercase tracking-widest mb-3 border border-emerald-200 shadow-sm uppercase">
                                     🌟 Điểm tối ưu vượt trội
                                 </div>
-                                <p class="text-gray-800 text-lg md:text-xl lg:text-2xl leading-relaxed font-medium mt-1">
+                                <p class="text-gray-800 text-lg md:text-xl lg:text-2xl leading-relaxed font-medium mt-1 uppercase tracking-tight text-balance">
                                     Tăng <strong class="text-emerald-600 font-serif-vi text-3xl md:text-4xl lg:text-5xl px-1.5 drop-shadow-md">33%</strong> số lượng SKU <br class="hidden md:block"> và rút ngắn <strong class="text-emerald-600 font-serif-vi text-3xl md:text-4xl lg:text-5xl px-1.5 drop-shadow-md">28.5%</strong> thời gian sản xuất.
                                 </p>
                             </div>
@@ -842,13 +759,10 @@
     </div> <!-- END OF TEAM DESIGN PANEL -->
 
     <!-- ========================================== -->
-    <!-- TEAM CONTENT PANEL (Mới Thêm) -->
-    <!-- ========================================== -->
     <!-- TEAM CONTENT PANEL -->
     <!-- ========================================== -->
     <div id="team-content" class="team-panel hidden fade-in-section">
         <main class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 mt-8 md:mt-12">
-            <!-- Header Section -->
             <div class="text-center mb-8 md:mb-10">
                 <div class="relative inline-block mb-3 md:mb-6">
                     <h2 class="font-serif-vi text-2xl sm:text-4xl md:text-5xl lg:text-6xl text-[#003366] font-bold drop-shadow-lg relative z-10 px-2 leading-tight uppercase max-w-4xl mx-auto text-balance">
@@ -856,12 +770,11 @@
                     </h2>
                     <div class="absolute -bottom-1 md:-bottom-2 left-[10%] right-[10%] h-2 md:h-4 bg-[#B8860B]/20 rounded-full blur-md -z-10"></div>
                 </div>
-                <p class="font-sans-vi text-gray-600 text-sm md:text-lg lg:text-xl max-w-3xl mx-auto px-4 leading-relaxed text-balance">
-                   Truyền thông CTKM <span class="font-semibold text-[#003366]">Xuân, Valentine, Thần Tài</span> từ Retail / OMNI và BST mới từ Brand / Sub - brand.
+                <p class="font-sans-vi text-gray-600 text-sm md:text-lg lg:text-xl max-w-3xl mx-auto px-4 leading-relaxed text-balance uppercase tracking-tight leading-snug text-center">
+                   Truyền thông CTKM <span class="font-semibold text-[#003366] uppercase tracking-tight">Xuân, Valentine, Thần Tài</span> từ Retail / OMNI và BST mới từ Brand / Sub - brand.
                 </p>
             </div>
 
-            <!-- CONTENT SUB-TABS (Blog / Zalo) -->
             <div class="flex justify-center mb-8 md:mb-12">
                 <div class="bg-white p-1.5 rounded-full shadow-sm border border-gray-200 flex flex-row w-full max-w-lg relative z-20">
                     <button onclick="switchContentTab('content-blog')" id="btn-content-blog" class="flex-1 py-2.5 sm:py-3 px-4 rounded-full font-bold text-xs sm:text-sm md:text-base transition-all duration-300 bg-[#B8860B] text-white shadow-md flex items-center justify-center gap-2">
@@ -873,18 +786,14 @@
                 </div>
             </div>
 
-            <!-- ========================= -->
-            <!-- SUB-TAB 1: BLOG -->
-            <!-- ========================= -->
             <div id="content-blog" class="content-sub-panel block fade-in-section is-visible">
-                <!-- Dashboard Stats (Chỉ giữ 2 thẻ) -->
                 <div class="grid grid-cols-1 md:grid-cols-2 gap-4 md:gap-8 max-w-4xl mx-auto mb-10">
                     <div class="glass-panel rounded-2xl p-6 md:p-8 border border-gray-100 shadow-sm flex items-center gap-4 md:gap-6 hover:shadow-md transition-shadow">
                         <div class="w-12 h-12 md:w-16 md:h-16 rounded-full bg-blue-50 flex items-center justify-center text-[#003366] shrink-0">
                             <i data-lucide="eye" class="w-6 h-6 md:w-8 md:h-8"></i>
                         </div>
                         <div>
-                            <p class="text-xs md:text-sm text-gray-500 font-bold tracking-wider uppercase mb-1">Tổng lượt xem nội dung</p>
+                            <p class="text-xs md:text-sm text-gray-500 font-bold tracking-wider uppercase mb-1 uppercase tracking-tight">Tổng lượt xem nội dung</p>
                             <h4 class="text-3xl md:text-4xl font-bold text-[#9A161F]">49.000+</h4>
                         </div>
                     </div>
@@ -893,140 +802,93 @@
                             <i data-lucide="file-text" class="w-6 h-6 md:w-8 md:h-8"></i>
                         </div>
                         <div>
-                            <p class="text-xs md:text-sm text-gray-500 font-bold tracking-wider uppercase mb-1">Bài Blog</p>
-                            <h4 class="text-3xl md:text-4xl font-bold text-[#003366]">15 <span class="text-lg md:text-xl font-medium text-gray-500">bài</span></h4>
+                            <p class="text-xs md:text-sm text-gray-500 font-bold tracking-wider uppercase mb-1 uppercase tracking-tight">Bài Blog</p>
+                            <h4 class="text-3xl md:text-4xl font-bold text-[#003366]">15 <span class="text-lg md:text-xl font-medium text-gray-500 uppercase tracking-tight leading-snug">bài</span></h4>
                         </div>
                     </div>
                 </div>
 
-                <!-- Sub-brand Section -->
                 <div class="max-w-6xl mx-auto mb-12">
                     <div class="text-center mb-8">
-                        <h3 class="font-bold text-[#003366] text-lg md:text-xl tracking-widest uppercase mb-2">Bài viết</h3>
+                        <h3 class="font-bold text-[#003366] text-lg md:text-xl tracking-widest uppercase mb-2 uppercase tracking-tight">Bài viết</h3>
                         <div class="h-1 w-16 bg-[#B8860B] mx-auto rounded-full"></div>
                     </div>
 
                     <div class="grid grid-cols-1 md:grid-cols-3 gap-6 md:gap-8">
                         
-                        <!-- DISNEY -->
+                        <!-- Card: DISNEY -->
                         <div class="bg-white rounded-2xl overflow-hidden shadow-lg border border-gray-100 group flex flex-col hover:-translate-y-2 transition-transform duration-300">
                             <div class="h-40 md:h-48 bg-[#E6F3FA] relative overflow-hidden flex items-center justify-center p-6 border-b border-gray-100">
-                                <img 
-                                    src="./DISNEY xanh.png" 
-                                    alt="Disney PNJ" 
-                                    class="h-full w-auto object-contain transform group-hover:scale-105 transition-transform duration-500"
-                                    onerror="this.onerror=null; this.src='https://placehold.co/400x200/003366/FFFFFF?text=DISNEY&font=Montserrat';"
-                                />
+                                <img src="./DISNEY xanh.png" alt="Disney PNJ" class="h-full w-auto object-contain transform group-hover:scale-105 transition-transform duration-500">
                             </div>
                             <div class="p-6 md:p-8 flex-1 flex flex-col justify-center items-center text-center">
-                                <h4 class="font-extrabold text-[#003366] text-xl md:text-2xl mb-3">DISNEY</h4>
-                                <p class="text-gray-600 text-sm leading-relaxed mb-4 md:mb-6">Các bộ sưu tập trang sức độc quyền mang đậm tinh thần phép màu từ Disney, nhắm tới khách hàng yêu thích sự ngọt ngào, mộng mơ.</p>
-                                
-                                <!-- Hình minh họa Blog Disney -->
-                                <img 
-                                    src="./Disney blog.jpg" 
-                                    alt="Blog Disney" 
-                                    class="w-full h-auto max-h-72 object-cover object-top rounded-xl mb-5 shadow-sm border border-gray-200"
-                                    onerror="this.onerror=null; this.src='https://placehold.co/300x400/E6F3FA/003366?text=Blog+Disney&font=Montserrat';"
-                                />
-
-                                <button class="mt-auto px-6 py-2 rounded-full border-2 border-[#003366] text-[#003366] font-bold text-xs uppercase tracking-wider hover:bg-[#003366] hover:text-white transition-colors w-full">Xem chi tiết</button>
+                                <h4 class="font-extrabold text-[#003366] text-xl md:text-2xl mb-3 uppercase tracking-tight">DISNEY</h4>
+                                <p class="text-gray-600 text-sm leading-relaxed mb-4 md:mb-6 uppercase tracking-tight text-center">Các bộ sưu tập trang sức độc quyền mang đậm tinh thần phép màu từ Disney, nhắm tới khách hàng yêu thích sự ngọt ngào, mộng mơ.</p>
+                                <img src="./Disney blog.jpg" alt="Blog Disney" class="w-full h-auto max-h-72 object-cover object-top rounded-xl mb-5 shadow-sm border border-gray-200">
+                                <button class="mt-auto px-6 py-2 rounded-full border-2 border-[#003366] text-[#003366] font-bold text-xs uppercase tracking-wider hover:bg-[#003366] hover:text-white transition-colors w-full uppercase tracking-tight leading-snug">Xem chi tiết</button>
                             </div>
                         </div>
 
-                        <!-- STYLE -->
+                        <!-- Card: STYLE -->
                         <div class="bg-white rounded-2xl overflow-hidden shadow-lg border border-gray-100 group flex flex-col hover:-translate-y-2 transition-transform duration-300">
                             <div class="h-40 md:h-48 bg-[#F4F4F4] relative overflow-hidden flex items-center justify-center p-6 border-b border-gray-100">
-                                <img 
-                                    src="./STYLE đen.png" 
-                                    alt="Style by PNJ" 
-                                    class="h-full w-auto object-contain transform group-hover:scale-105 transition-transform duration-500"
-                                    onerror="this.onerror=null; this.src='https://placehold.co/400x200/111111/FFFFFF?text=STYLE&font=Montserrat';"
-                                />
+                                <img src="./STYLE đen.png" alt="Style by PNJ" class="h-full w-auto object-contain transform group-hover:scale-105 transition-transform duration-500">
                             </div>
                             <div class="p-6 md:p-8 flex-1 flex flex-col justify-center items-center text-center">
-                                <h4 class="font-extrabold text-gray-900 text-xl md:text-2xl mb-3">STYLE</h4>
-                                <p class="text-gray-600 text-sm leading-relaxed mb-4 md:mb-6">Dòng sản phẩm thể hiện cá tính mạnh mẽ, thời thượng. Dành cho giới trẻ yêu thích thể hiện cái tôi qua ngôn ngữ trang sức.</p>
-                                
-                                <!-- Hình minh họa Blog Style -->
-                                <img 
-                                    src="./Style blog.jpg" 
-                                    alt="Blog Style" 
-                                    class="w-full h-auto max-h-72 object-cover object-top rounded-xl mb-5 shadow-sm border border-gray-200"
-                                    onerror="this.onerror=null; this.src='https://placehold.co/300x400/F4F4F4/111111?text=Blog+Style&font=Montserrat';"
-                                />
-
-                                <button class="mt-auto px-6 py-2 rounded-full border-2 border-gray-900 text-gray-900 font-bold text-xs uppercase tracking-wider hover:bg-gray-900 hover:text-white transition-colors w-full">Xem chi tiết</button>
+                                <h4 class="font-extrabold text-gray-900 text-xl md:text-2xl mb-3 uppercase tracking-tight">STYLE</h4>
+                                <p class="text-gray-600 text-sm leading-relaxed mb-4 md:mb-6 uppercase tracking-tight text-center">Dòng sản phẩm thể hiện cá tính mạnh mẽ, thời thượng. Dành cho giới trẻ yêu thích thể hiện cái tôi qua ngôn ngữ trang sức.</p>
+                                <img src="./Style blog.jpg" alt="Blog Style" class="w-full h-auto max-h-72 object-cover object-top rounded-xl mb-5 shadow-sm border border-gray-200">
+                                <button class="mt-auto px-6 py-2 rounded-full border-2 border-gray-900 text-gray-900 font-bold text-xs uppercase tracking-wider hover:bg-gray-900 hover:text-white transition-colors w-full uppercase tracking-tight leading-snug">Xem chi tiết</button>
                             </div>
                         </div>
 
-                        <!-- MANCODE -->
+                        <!-- Card: MANCODE -->
                         <div class="bg-white rounded-2xl overflow-hidden shadow-lg border border-gray-100 group flex flex-col hover:-translate-y-2 transition-transform duration-300">
                             <div class="h-40 md:h-48 bg-[#FFF5E6] relative overflow-hidden flex items-center justify-center p-6 border-b border-gray-100">
-                                <img 
-                                    src="./mancode cam.png" 
-                                    alt="Mancode" 
-                                    class="h-full w-auto object-contain transform group-hover:scale-105 transition-transform duration-500"
-                                    onerror="this.onerror=null; this.src='https://placehold.co/400x200/D97706/FFFFFF?text=MANCODE&font=Montserrat';"
-                                />
+                                <img src="./mancode cam.png" alt="Mancode" class="h-full w-auto object-contain transform group-hover:scale-105 transition-transform duration-500">
                             </div>
                             <div class="p-6 md:p-8 flex-1 flex flex-col justify-center items-center text-center">
-                                <h4 class="font-extrabold text-[#D97706] text-xl md:text-2xl mb-3">MANCODE</h4>
-                                <p class="text-gray-600 text-sm leading-relaxed mb-4 md:mb-6">Bộ sưu tập trang sức nam tính, thanh lịch và cuốn hút. Khẳng định phong thái phái mạnh hiện đại.</p>
-                                
-                                <!-- Hình minh họa Blog Mancode -->
-                                <img 
-                                    src="./Mancode blog.jpg" 
-                                    alt="Blog Mancode" 
-                                    class="w-full h-auto max-h-72 object-cover object-top rounded-xl mb-5 shadow-sm border border-gray-200"
-                                    onerror="this.onerror=null; this.src='https://placehold.co/300x400/FFF5E6/D97706?text=Blog+Mancode&font=Montserrat';"
-                                />
-
-                                <button class="mt-auto px-6 py-2 rounded-full border-2 border-[#D97706] text-[#D97706] font-bold text-xs uppercase tracking-wider hover:bg-[#D97706] hover:text-white transition-colors w-full">Xem chi tiết</button>
+                                <h4 class="font-extrabold text-[#D97706] text-xl md:text-2xl mb-3 uppercase tracking-tight">MANCODE</h4>
+                                <p class="text-gray-600 text-sm leading-relaxed mb-4 md:mb-6 uppercase tracking-tight text-center">Bộ sưu tập trang sức nam tính, thanh lịch và cuốn hút. Khẳng định phong thái phái mạnh hiện đại.</p>
+                                <img src="./Mancode blog.jpg" alt="Blog Mancode" class="w-full h-auto max-h-72 object-cover object-top rounded-xl mb-5 shadow-sm border border-gray-200">
+                                <button class="mt-auto px-6 py-2 rounded-full border-2 border-[#D97706] text-[#D97706] font-bold text-xs uppercase tracking-wider hover:bg-[#D97706] hover:text-white transition-all w-full uppercase tracking-tight leading-snug">Xem chi tiết</button>
                             </div>
                         </div>
 
                     </div>
                 </div>
 
-                <!-- SMT Takeaway -->
                 <div class="bg-white border-l-4 border-[#B8860B] rounded-r-2xl p-6 md:p-8 shadow-md flex flex-col md:flex-row items-start md:items-center gap-5 lg:gap-8 mb-8">
                     <div class="bg-amber-50 p-3 md:p-4 rounded-full flex-shrink-0 mt-1 md:mt-0 shadow-inner">
                         <i data-lucide="award" class="w-6 h-6 md:w-8 md:h-8 text-[#B8860B]"></i>
                     </div>
                     <div>
-                        <h3 class="text-lg md:text-xl font-bold text-[#003366] mb-2 lg:mb-3 uppercase">Đánh giá chiến lược</h3>
-                        <p class="text-gray-600 text-sm md:text-base leading-relaxed text-balance">
+                        <h3 class="text-lg md:text-xl font-bold text-[#003366] mb-2 lg:mb-3 uppercase uppercase tracking-tight leading-snug">Đánh giá chiến lược</h3>
+                        <p class="text-gray-600 text-sm md:text-base leading-relaxed text-balance uppercase tracking-tight text-left">
                             Chất lượng nội dung đạt <strong>chuẩn guideline</strong> đang là đòn bẩy cốt lõi thúc đẩy GTM cho các Bộ sưu tập. Việc đầu tư hình ảnh đã trực tiếp tạo ra <strong>hơn 49.000 lượt xem tự nhiên (Organic views)</strong>, giúp tối ưu hóa chi phí quảng cáo và tiếp cận sâu sát tệp khách hàng tiềm năng của PNJ trên các kênh sở hữu (Owned media).
                         </p>
                     </div>
                 </div>
-            </div> <!-- END BLOG SUB-TAB -->
+            </div>
 
-            <!-- ========================= -->
-            <!-- SUB-TAB 2: ZALO BROADCAST -->
-            <!-- ========================= -->
             <div id="content-zalo" class="content-sub-panel hidden fade-in-section">
-                <!-- Dashboard Stats -->
                 <div class="grid grid-cols-1 md:grid-cols-2 gap-4 md:gap-8 max-w-4xl mx-auto mb-10">
-                    <!-- Stat 1: Lượt xem -->
                     <div class="glass-panel rounded-2xl p-6 md:p-8 border border-gray-100 shadow-sm flex items-center gap-4 md:gap-6 hover:shadow-md transition-shadow">
                         <div class="w-12 h-12 md:w-16 md:h-16 rounded-full bg-blue-50 flex items-center justify-center text-[#003366] shrink-0">
                             <i data-lucide="eye" class="w-6 h-6 md:w-8 md:h-8"></i>
                         </div>
                         <div>
-                            <p class="text-xs md:text-sm text-gray-500 font-bold tracking-wider uppercase mb-1">Tổng lượt xem nội dung</p>
+                            <p class="text-xs md:text-sm text-gray-500 font-bold tracking-wider uppercase mb-1 uppercase tracking-tight">Tổng lượt xem nội dung</p>
                             <h4 class="text-3xl md:text-4xl font-bold text-[#9A161F]">52.609</h4>
                         </div>
                     </div>
                     
-                    <!-- Stat 2: Highlight Text -->
                     <div class="glass-panel rounded-2xl p-6 md:p-8 border border-gray-100 shadow-sm flex items-center gap-4 md:gap-6 hover:shadow-md transition-shadow bg-gradient-to-br from-white to-amber-50">
                         <div class="w-12 h-12 md:w-16 md:h-16 rounded-full bg-amber-100 flex items-center justify-center text-[#B8860B] shrink-0">
                             <i data-lucide="users" class="w-6 h-6 md:w-8 md:h-8"></i>
                         </div>
                         <div>
-                                <h4 class="text-lg md:text-xl font-bold text-[#003366] leading-tight mt-1">
+                                <h4 class="text-lg md:text-xl font-bold text-[#003366] leading-tight mt-1 uppercase tracking-tight">
                                 Tiếp cận tệp hơn <br/>
                                 <span class="text-[#9A161F] text-2xl md:text-3xl">400K followers</span>
                             </h4>
@@ -1034,10 +896,9 @@
                     </div>
                 </div>
 
-                <!-- Sub-brand Section -->
                 <div class="max-w-6xl mx-auto mb-12">
                     <div class="text-center mb-8">
-                        <h3 class="font-bold text-[#003366] text-lg md:text-xl tracking-widest uppercase mb-2">Bài viết</h3>
+                        <h3 class="font-bold text-[#003366] text-lg md:text-xl tracking-widest uppercase mb-2 uppercase tracking-tight">Bài viết</h3>
                         <div class="h-1 w-16 bg-[#B8860B] mx-auto rounded-full"></div>
                     </div>
 
@@ -1046,78 +907,39 @@
                         <!-- RETAIL -->
                         <div class="bg-white rounded-2xl overflow-hidden shadow-lg border border-gray-100 group flex flex-col hover:-translate-y-2 transition-transform duration-300">
                             <div class="h-40 md:h-48 bg-[#F9F1E5] relative overflow-hidden flex items-center justify-center p-6 border-b border-gray-100">
-                                <img 
-                                    src="./RETAIL.png" 
-                                    alt="Retail" 
-                                    class="h-full w-auto object-contain transform group-hover:scale-105 transition-transform duration-500"
-                                    onerror="this.onerror=null; this.src='https://placehold.co/400x200/003366/FFFFFF?text=RETAIL&font=Montserrat';"
-                                />
+                                <img src="./RETAIL.png" alt="Retail" class="h-full w-auto object-contain transform group-hover:scale-105 transition-transform duration-500">
                             </div>
                             <div class="p-6 md:p-8 flex-1 flex flex-col justify-center items-center text-center">
-                                <h4 class="font-extrabold text-[#003366] text-xl md:text-2xl mb-3">RETAIL</h4>
-                                <p class="text-gray-600 text-sm leading-relaxed mb-4 md:mb-6">Hỗ trợ đẩy mạnh truyền thông các chương trình khuyến mãi và hoạt động bán lẻ trên toàn hệ thống cửa hàng.</p>
-                                
-                                <!-- Hình minh họa Zalo Retail -->
-                                <img 
-                                    src="./ZB reatil.jpg" 
-                                    alt="Zalo Retail" 
-                                    class="w-full h-auto max-h-72 object-cover object-top rounded-xl mb-5 shadow-sm border border-gray-200"
-                                    onerror="this.onerror=null; this.src='https://placehold.co/300x400/F9F1E5/003366?text=Zalo+Retail&font=Montserrat';"
-                                />
-
-                                <button class="mt-auto px-6 py-2 rounded-full border-2 border-[#003366] text-[#003366] font-bold text-xs uppercase tracking-wider hover:bg-[#003366] hover:text-white transition-colors w-full">Xem chi tiết</button>
+                                <h4 class="font-extrabold text-[#003366] text-xl md:text-2xl mb-3 uppercase tracking-tight">RETAIL</h4>
+                                <p class="text-gray-600 text-sm leading-relaxed mb-4 md:mb-6 uppercase tracking-tight text-center">Hỗ trợ đẩy mạnh truyền thông các chương trình khuyến mãi và hoạt động bán lẻ trên toàn hệ thống cửa hàng.</p>
+                                <img src="./ZB reatil.jpg" alt="Zalo Retail" class="w-full h-auto max-h-72 object-cover object-top rounded-xl mb-5 shadow-sm border border-gray-200">
+                                <button class="mt-auto px-6 py-2 rounded-full border-2 border-[#003366] text-[#003366] font-bold text-xs uppercase tracking-wider hover:bg-[#003366] hover:text-white transition-all w-full uppercase tracking-tight leading-snug">Xem chi tiết</button>
                             </div>
                         </div>
 
                         <!-- DORAEMON -->
                         <div class="bg-white rounded-2xl overflow-hidden shadow-lg border border-gray-100 group flex flex-col hover:-translate-y-2 transition-transform duration-300">
                             <div class="h-40 md:h-48 bg-[#E6F3FA] relative overflow-hidden flex items-center justify-center p-6 border-b border-gray-100">
-                                <img 
-                                    src="./LOGO doraemon_PNJ-02.png" 
-                                    alt="Doraemon" 
-                                    class="h-full w-auto object-contain transform group-hover:scale-105 transition-transform duration-500"
-                                    onerror="this.onerror=null; this.src='https://placehold.co/400x200/38BDF8/FFFFFF?text=DORAEMON&font=Montserrat';"
-                                />
+                                <img src="./LOGO doraemon_PNJ-02.png" alt="Doraemon" class="h-full w-auto object-contain transform group-hover:scale-105 transition-transform duration-500">
                             </div>
                             <div class="p-6 md:p-8 flex-1 flex flex-col justify-center items-center text-center">
-                                <h4 class="font-extrabold text-[#0284C7] text-xl md:text-2xl mb-3">DORAEMON</h4>
-                                <p class="text-gray-600 text-sm leading-relaxed mb-4 md:mb-6">Phủ sóng bộ sưu tập Doraemon ngộ nghĩnh, tiếp cận tệp khách hàng trẻ em và gia đình mang nhiều yếu tố hoài niệm.</p>
-                                
-                                <!-- Hình minh họa Zalo Doraemon -->
-                                <img 
-                                    src="./ZB Doraemon.jpg" 
-                                    alt="Zalo Doraemon" 
-                                    class="w-full h-auto max-h-72 object-cover object-top rounded-xl mb-5 shadow-sm border border-gray-200"
-                                    onerror="this.onerror=null; this.src='https://placehold.co/300x400/E6F3FA/0284C7?text=Zalo+Doraemon&font=Montserrat';"
-                                />
-
-                                <button class="mt-auto px-6 py-2 rounded-full border-2 border-[#0284C7] text-[#0284C7] font-bold text-xs uppercase tracking-wider hover:bg-[#0284C7] hover:text-white transition-colors w-full">Xem chi tiết</button>
+                                <h4 class="font-extrabold text-[#0284C7] text-xl md:text-2xl mb-3 uppercase tracking-tight">DORAEMON</h4>
+                                <p class="text-gray-600 text-sm leading-relaxed mb-4 md:mb-6 uppercase tracking-tight text-center text-balance">Phủ sóng bộ sưu tập Doraemon ngộ nghĩnh, tiếp cận tệp khách hàng trẻ em và gia đình mang nhiều yếu tố hoài niệm.</p>
+                                <img src="./ZB Doraemon.jpg" alt="Zalo Doraemon" class="w-full h-auto max-h-72 object-cover object-top rounded-xl mb-5 shadow-sm border border-gray-200">
+                                <button class="mt-auto px-6 py-2 rounded-full border-2 border-[#0284C7] text-[#0284C7] font-bold text-xs uppercase tracking-wider hover:bg-[#0284C7] hover:text-white transition-all w-full uppercase tracking-tight leading-snug">Xem chi tiết</button>
                             </div>
                         </div>
 
                         <!-- ARTA -->
                         <div class="bg-white rounded-2xl overflow-hidden shadow-lg border border-gray-100 group flex flex-col hover:-translate-y-2 transition-transform duration-300">
                             <div class="h-40 md:h-48 bg-[#F4F4F4] relative overflow-hidden flex items-center justify-center p-6 border-b border-gray-100">
-                                <img 
-                                    src="./Arta.png" 
-                                    alt="Arta" 
-                                    class="h-full w-auto object-contain transform group-hover:scale-105 transition-transform duration-500"
-                                    onerror="this.onerror=null; this.src='https://placehold.co/400x200/111111/FFFFFF?text=ARTA&font=Montserrat';"
-                                />
+                                <img src="./Arta.png" alt="Arta" class="h-full w-auto object-contain transform group-hover:scale-105 transition-transform duration-500">
                             </div>
                             <div class="p-6 md:p-8 flex-1 flex flex-col justify-center items-center text-center">
-                                <h4 class="font-extrabold text-gray-900 text-xl md:text-2xl mb-3">ARTA</h4>
-                                <p class="text-gray-600 text-sm leading-relaxed mb-4 md:mb-6">Các thiết kế trang sức mang tính nghệ thuật đương đại, truyền tải thông điệp thẩm mỹ độc đáo đến tệp khách hàng.</p>
-                                
-                                <!-- Hình minh họa Zalo Arta -->
-                                <img 
-                                    src="./ZB Arta.jpg" 
-                                    alt="Zalo Arta" 
-                                    class="w-full h-auto max-h-72 object-cover object-top rounded-xl mb-5 shadow-sm border border-gray-200"
-                                    onerror="this.onerror=null; this.src='https://placehold.co/300x400/F4F4F4/111111?text=Zalo+Arta&font=Montserrat';"
-                                />
-
-                                <button class="mt-auto px-6 py-2 rounded-full border-2 border-gray-900 text-gray-900 font-bold text-xs uppercase tracking-wider hover:bg-gray-900 hover:text-white transition-colors w-full">Xem chi tiết</button>
+                                <h4 class="font-extrabold text-gray-900 text-xl md:text-2xl mb-3 uppercase tracking-tight">ARTA</h4>
+                                <p class="text-gray-600 text-sm leading-relaxed mb-4 md:mb-6 uppercase tracking-tight text-center">Các thiết kế trang sức mang tính nghệ thuật đương đại, truyền tải thông điệp thẩm mỹ độc đáo đến tệp khách hàng.</p>
+                                <img src="./ZB Arta.jpg" alt="Zalo Arta" class="w-full h-auto max-h-72 object-cover object-top rounded-xl mb-5 shadow-sm border border-gray-200">
+                                <button class="mt-auto px-6 py-2 rounded-full border-2 border-gray-900 text-gray-900 font-bold text-xs uppercase tracking-wider hover:bg-gray-900 hover:text-white transition-all w-full uppercase tracking-tight leading-snug">Xem chi tiết</button>
                             </div>
                         </div>
 
@@ -1130,17 +952,15 @@
     
     <!-- Footer -->
     <footer class="mt-8 md:mt-12 text-center pb-8 border-t border-gray-200 pt-6 md:pt-8 max-w-7xl mx-auto px-4">
-        <p class="text-gray-400 text-[10px] sm:text-xs md:text-sm font-sans-vi">
+        <p class="text-gray-400 text-[10px] sm:text-xs md:text-sm font-sans-vi uppercase tracking-widest">
             © 2026 PNJ Creative Hub. Báo cáo nội bộ K.KHBL
         </p>
     </footer>
 
     <!-- Khởi tạo Icons và Animation -->
     <script>
-        // Render các icon từ thư viện Lucide
         lucide.createIcons();
 
-        // Animation load trang ban đầu
         document.addEventListener("DOMContentLoaded", () => {
             setTimeout(() => {
                 document.querySelectorAll('.fade-in-section').forEach(el => {
@@ -1149,88 +969,48 @@
             }, 100);
         });
 
-        // 0. Logic chuyển đổi TEAM TABS (Cấp cao nhất)
         function switchTeamTab(teamTabId) {
-            // Ẩn tất cả panel của Team
             document.querySelectorAll('.team-panel').forEach(panel => {
                 panel.classList.add('hidden');
                 panel.classList.remove('block', 'is-visible');
             });
 
-            // Reset trạng thái nút Team
             document.querySelectorAll('#btn-team-design, #btn-team-content').forEach(btn => {
                 btn.classList.remove('bg-[#9A161F]', 'text-white', 'shadow-md');
                 btn.classList.add('bg-transparent', 'text-[#003366]', 'hover:bg-white/60');
             });
 
-            // Hiển thị panel được chọn
             const activePanel = document.getElementById(teamTabId);
             activePanel.classList.remove('hidden');
             activePanel.classList.add('block');
             setTimeout(() => activePanel.classList.add('is-visible'), 50);
 
-            // Cập nhật màu nút Team
             const activeBtn = document.getElementById('btn-' + teamTabId);
             activeBtn.classList.remove('bg-transparent', 'text-[#003366]', 'hover:bg-white/60');
             activeBtn.classList.add('bg-[#9A161F]', 'text-white', 'shadow-md');
         }
 
-        // 1. Logic chuyển đổi MENU CHÍNH (Main Tabs)
         function switchMainTab(mainTabId) {
-            // Ẩn tất cả màn hình chính
             document.querySelectorAll('.main-tab-panel').forEach(panel => {
                 panel.classList.add('hidden');
                 panel.classList.remove('block', 'is-visible');
             });
 
-            // Reset trạng thái nút menu chính
             document.querySelectorAll('#btn-main-projects, #btn-main-roles, #btn-main-product-powerhouse').forEach(btn => {
                 btn.classList.remove('bg-[#003366]', 'text-white', 'shadow-lg');
                 btn.classList.add('bg-transparent', 'text-gray-600', 'hover:bg-gray-50');
             });
 
-            // Hiển thị màn hình được chọn
             const activePanel = document.getElementById(mainTabId);
             activePanel.classList.remove('hidden');
             activePanel.classList.add('block');
             setTimeout(() => activePanel.classList.add('is-visible'), 50);
 
-            // Cập nhật màu nút menu chính
             const activeBtn = document.getElementById('btn-' + mainTabId);
             activeBtn.classList.remove('bg-transparent', 'text-gray-600', 'hover:bg-gray-50');
             activeBtn.classList.add('bg-[#003366]', 'text-white', 'shadow-lg');
         }
 
-        // 2. Logic chuyển đổi SUB-TAB (Bên trong mục Dự Án Nổi Bật)
-        function switchTab(tabId) {
-            document.querySelectorAll('.tab-panel').forEach(panel => {
-                panel.classList.add('hidden');
-                panel.classList.remove('block', 'is-visible');
-            });
-
-            document.querySelectorAll('.tab-btn').forEach(btn => {
-                btn.classList.remove('bg-[#9A161F]', 'text-white', 'shadow-md', 'border-[#9A161F]');
-                btn.classList.add('bg-white', 'text-[#003366]', 'border-gray-200', 'shadow-sm');
-            });
-
-            const activePanel = document.getElementById(tabId);
-            if(activePanel) {
-                activePanel.classList.remove('hidden');
-                activePanel.classList.add('block');
-                setTimeout(() => {
-                    activePanel.style.transitionDelay = '0ms'; 
-                    activePanel.classList.add('is-visible');
-                }, 50);
-            }
-
-            const activeBtn = document.getElementById('btn-' + tabId);
-            if(activeBtn) {
-                activeBtn.classList.remove('bg-white', 'text-[#003366]', 'border-gray-200', 'shadow-sm');
-                activeBtn.classList.add('bg-[#9A161F]', 'text-white', 'shadow-md', 'border-[#9A161F]');
-            }
-        }
-
-        // 3. Logic chuyển đổi SUB-TAB bên TEAM CONTENT (Blog / Zalo)
         function switchContentTab(tabId) {
             document.querySelectorAll('.content-sub-panel').forEach(panel => {
                 panel.classList.add('hidden');
@@ -1250,46 +1030,9 @@
                 activePanel.classList.add('is-visible');
             }, 50);
 
-            const activeBtn = document.getElementById('btn-' + tabId.replace('content-', 'content-'));
+            const activeBtn = document.getElementById('btn-' + tabId);
             activeBtn.classList.remove('bg-transparent', 'text-gray-600', 'hover:bg-gray-50');
             activeBtn.classList.add('bg-[#B8860B]', 'text-white', 'shadow-md');
-        }
-
-        // 4. Logic lọc bài viết TEAM CONTENT (Bên trong tab Blog)
-        function filterArticles(category) {
-            // Đặt lại trạng thái các nút lọc
-            document.querySelectorAll('.article-filter-btn').forEach(btn => {
-                btn.classList.remove('bg-[#003366]', 'text-white', 'shadow-md');
-                btn.classList.add('bg-white', 'text-gray-600', 'border-gray-200');
-            });
-
-            // Active nút đang bấm
-            const activeBtn = document.getElementById('btn-filter-' + category);
-            if (activeBtn) {
-                activeBtn.classList.remove('bg-white', 'text-gray-600', 'border-gray-200');
-                activeBtn.classList.add('bg-[#003366]', 'text-white', 'shadow-md');
-            }
-
-            // Lọc và thêm hiệu ứng mờ cho các thẻ Card
-            const cards = document.querySelectorAll('.article-card');
-            cards.forEach(card => {
-                card.style.transition = 'opacity 0.3s ease, transform 0.3s ease';
-                card.style.opacity = '0';
-                card.style.transform = 'scale(0.95)';
-                
-                setTimeout(() => {
-                    if (category === 'all' || card.classList.contains(category)) {
-                        card.style.display = 'flex';
-                        // Đợi một tích tắc để display:flex áp dụng xong rồi mới mờ dần lên
-                        setTimeout(() => {
-                            card.style.opacity = '1';
-                            card.style.transform = 'scale(1)';
-                        }, 50);
-                    } else {
-                        card.style.display = 'none';
-                    }
-                }, 300);
-            });
         }
     </script>
 </body>
