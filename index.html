@@ -138,7 +138,7 @@
             <div class="grid grid-cols-1 md:grid-cols-2 gap-6 lg:gap-10 pb-8">
                 
                 <!-- CARD 1: ZMP -->
-                <div class="bg-white rounded-3xl shadow-xl border-t-4 border-[#B8860B] p-6 sm:p-8 lg:p-10 flex flex-col hover:-translate-y-2 transition-transform duration-300 relative">
+                <div class="bg-white rounded-3xl shadow-xl border-t-4 border-[#B8860B] p-6 sm:p-8 lg:p-10 flex flex-col hover:-translate-y-2 transition-transform duration-300 relative h-full">
                     <div class="text-center mb-6 md:mb-8">
                         <p class="font-serif-vi text-sm sm:text-base font-bold tracking-widest uppercase text-[#003366] mb-3">Phát triển KHM</p>
                         <div class="bg-gradient-to-r from-transparent via-[#F9F1E5] to-transparent py-4 px-2 rounded-2xl border border-[#B8860B]/30 shadow-sm">
@@ -162,35 +162,38 @@
                         </div>
                     </div>
 
+                    <!-- Phần Bottom của ZMP (List + Media) dóng hàng bằng mt-auto -->
                     <div class="mt-auto pt-6 border-t border-gray-200">
-                        <p class="font-sans-vi text-sm sm:text-base font-semibold text-[#003366] mb-4 text-center">Thiết kế full material cho campaign CT 8.3</p>
-                        <p class="font-sans-vi text-sm sm:text-base font-semibold text-[#003366] mb-4 text-center"> và SN PNJ 38 năm</p>
-                        <div class="flex justify-center">
-                            <ul class="font-sans-vi text-sm sm:text-base text-[#003366] space-y-2.5 font-medium text-left inline-block italic">
-                                <li class="flex items-center gap-3"><i data-lucide="image" class="w-4 h-4 text-[#B8860B] shrink-0 not-italic"></i> <span><strong class="font-bold">6</strong> visuals</span></li>
-                                <li class="flex items-center gap-3"><i data-lucide="video" class="w-4 h-4 text-[#B8860B] shrink-0 not-italic"></i> <span><strong class="font-bold">8</strong> videos</span></li>
-                                <li class="flex items-center gap-3"><i data-lucide="pen-tool" class="w-4 h-4 text-[#B8860B] shrink-0 not-italic"></i> <span><strong class="font-bold">20</strong> Artworks</span></li>
-                                <li class="flex items-start gap-3"><i data-lucide="layers" class="w-4 h-4 text-[#B8860B] shrink-0 mt-1 not-italic"></i> <span><strong class="font-bold">162</strong> adaptation (Sub - brand /BST) <br></span></li>
-                            </ul>
+                        <!-- Khóa chiều cao danh sách để bằng với E-Brochure -->
+                        <div class="h-[180px] sm:h-[200px] flex flex-col justify-start">
+                            <p class="font-sans-vi text-sm sm:text-base font-semibold text-[#003366] mb-4 text-center">Thiết kế full material cho campaign CT 8.3<br>và SN PNJ 38 năm</p>
+                            <div class="flex justify-center flex-1">
+                                <ul class="font-sans-vi text-sm sm:text-base text-[#003366] space-y-2.5 font-medium text-left inline-block italic">
+                                    <li class="flex items-center gap-3"><i data-lucide="image" class="w-4 h-4 text-[#B8860B] shrink-0 not-italic"></i> <span><strong class="font-bold">6</strong> visuals</span></li>
+                                    <li class="flex items-center gap-3"><i data-lucide="video" class="w-4 h-4 text-[#B8860B] shrink-0 not-italic"></i> <span><strong class="font-bold">8</strong> videos</span></li>
+                                    <li class="flex items-center gap-3"><i data-lucide="pen-tool" class="w-4 h-4 text-[#B8860B] shrink-0 not-italic"></i> <span><strong class="font-bold">20</strong> Artworks</span></li>
+                                    <li class="flex items-start gap-3"><i data-lucide="layers" class="w-4 h-4 text-[#B8860B] shrink-0 mt-1 not-italic"></i> <span><strong class="font-bold">162</strong> adaptation (Sub - brand /BST)</span></li>
+                                </ul>
+                            </div>
                         </div>
                     </div>
 
                     <!-- Customer's Journey Video -->
                     <div class="mt-6 pt-6 border-t border-dashed border-gray-300">
-                        <div class="flex items-center justify-center gap-2 mb-3">
-                            <i data-lucide="smartphone" class="w-4 h-4 text-[#9A161F]"></i>
-                            <p class="font-sans-vi text-xs sm:text-sm font-bold text-[#9A161F] text-center uppercase tracking-widest">
-                                Video giới thiệu ZMP - Trợ thủ số đắc lực cho chi nhánh
+                        <div class="flex items-center justify-center gap-2 mb-3 min-h-[48px]">
+                            <i data-lucide="smartphone" class="w-4 h-4 text-[#9A161F] shrink-0"></i>
+                            <p class="font-sans-vi text-xs sm:text-sm font-bold text-[#9A161F] text-center uppercase tracking-widest leading-snug">
+                                Video giới thiệu ZMP - Trợ thủ số đắc lực<br class="hidden sm:block"> cho chi nhánh
                             </p>
                         </div>
-                        <div class="rounded-xl overflow-hidden shadow-md bg-gradient-to-b from-[#F9F1E5] to-white flex justify-center items-center border border-[#B8860B]/20 p-2">
+                        <div class="rounded-[1.25rem] overflow-hidden shadow-lg border-2 border-[#F9F1E5] p-1.5 bg-[#F9F1E5] h-[280px] sm:h-[320px] w-full">
                             <video 
                                 controls 
                                 autoplay 
                                 muted 
                                 loop 
                                 playsinline
-                                class="w-full max-h-[350px] object-contain rounded-lg shadow-sm"
+                                class="w-full h-full object-cover rounded-xl bg-black shadow-sm"
                             >
                                 <source src="https://res.cloudinary.com/dhe7uziws/video/upload/v1776226195/qkblj54tkrwjd3bn2x7l.mp4" type="video/mp4">
                                 Trình duyệt của bạn không hỗ trợ thẻ video.
@@ -200,7 +203,7 @@
                 </div>
 
                 <!-- CARD 2: E-BROCHURE -->
-                <div class="bg-white rounded-3xl shadow-xl border-t-4 border-[#9A161F] p-6 sm:p-8 lg:p-10 flex flex-col hover:-translate-y-2 transition-transform duration-300 relative">
+                <div class="bg-white rounded-3xl shadow-xl border-t-4 border-[#9A161F] p-6 sm:p-8 lg:p-10 flex flex-col hover:-translate-y-2 transition-transform duration-300 relative h-full">
                     <div class="text-center mb-6 md:mb-8">
                         <p class="font-serif-vi text-sm sm:text-base font-bold tracking-widest uppercase text-[#003366] mb-3">Tăng doanh thu hàng mới</p>
                         <div class="bg-gradient-to-r from-transparent via-[#F9F1E5] to-transparent py-4 px-2 rounded-2xl border border-[#B8860B]/30 shadow-sm">
@@ -215,29 +218,33 @@
                         </div>
                     </div>
 
+                    <!-- Phần Bottom của E-Brochure (List + Media) dóng hàng bằng mt-auto -->
                     <div class="mt-auto pt-6 border-t border-gray-200">
-                        <p class="font-sans-vi text-sm sm:text-base font-semibold text-[#003366] mb-4 text-center">Thiết kế full material cho E-Brochure (layout, KV, Video,...)</p>
-                        <div class="flex justify-center">
-                            <ul class="font-sans-vi text-sm sm:text-base text-[#003366] space-y-3 font-medium text-left inline-block italic">
-                                <li class="flex items-center gap-3"><i data-lucide="layout-template" class="w-5 h-5 text-[#B8860B] shrink-0 not-italic"></i> <span class="text-lg"><strong class="font-bold">54</strong> visual thiết kế</span></li>
-                                <li class="flex items-center gap-3"><i data-lucide="box" class="w-5 h-5 text-[#B8860B] shrink-0 not-italic"></i> <span class="text-lg"><strong class="font-bold">186</strong> mẫu hàng mới</span></li>
-                                <li class="flex items-center gap-3"><i data-lucide="film" class="w-5 h-5 text-[#B8860B] shrink-0 not-italic"></i> <span class="text-lg"><strong class="font-bold">59</strong> videos</span></li>
-                            </ul>
+                        <!-- Khóa chiều cao danh sách để bằng với ZMP -->
+                        <div class="h-[180px] sm:h-[200px] flex flex-col justify-start">
+                            <p class="font-sans-vi text-sm sm:text-base font-semibold text-[#003366] mb-4 text-center">Thiết kế full material cho E-Brochure<br>(layout, KV, Video,...)</p>
+                            <div class="flex justify-center flex-1">
+                                <ul class="font-sans-vi text-sm sm:text-base text-[#003366] space-y-3 font-medium text-left inline-block italic">
+                                    <li class="flex items-center gap-3"><i data-lucide="layout-template" class="w-5 h-5 text-[#B8860B] shrink-0 not-italic"></i> <span class="text-lg"><strong class="font-bold">54</strong> visual thiết kế</span></li>
+                                    <li class="flex items-center gap-3"><i data-lucide="box" class="w-5 h-5 text-[#B8860B] shrink-0 not-italic"></i> <span class="text-lg"><strong class="font-bold">186</strong> mẫu hàng mới</span></li>
+                                    <li class="flex items-center gap-3"><i data-lucide="film" class="w-5 h-5 text-[#B8860B] shrink-0 not-italic"></i> <span class="text-lg"><strong class="font-bold">59</strong> videos</span></li>
+                                </ul>
+                            </div>
                         </div>
                     </div>
 
                     <!-- E-Brochure Image Demo (Scrollable) -->
                     <div class="mt-6 pt-6 border-t border-dashed border-gray-300">
-                        <div class="flex items-center justify-center gap-2 mb-3">
-                            <i data-lucide="smartphone" class="w-4 h-4 text-[#9A161F]"></i>
-                            <p class="font-sans-vi text-xs sm:text-sm font-bold text-[#9A161F] text-center uppercase tracking-widest">
+                        <div class="flex items-center justify-center gap-2 mb-3 min-h-[48px]">
+                            <i data-lucide="smartphone" class="w-4 h-4 text-[#9A161F] shrink-0"></i>
+                            <p class="font-sans-vi text-xs sm:text-sm font-bold text-[#9A161F] text-center uppercase tracking-widest leading-snug">
                                 Trải nghiệm E-Brochure
                             </p>
                         </div>
                         
-                        <!-- Khung điện thoại giả lập với tính năng Scroll -->
-                        <div class="rounded-[1.25rem] shadow-lg border-2 border-[#F9F1E5] p-1.5 bg-[#F9F1E5]">
-                            <div class="h-[330px] w-full overflow-y-auto rounded-xl bg-white shadow-inner custom-scrollbar-container">
+                        <!-- Khung điện thoại giả lập với tính năng Scroll khóa chiều cao bằng với Video -->
+                        <div class="rounded-[1.25rem] shadow-lg border-2 border-[#F9F1E5] p-1.5 bg-[#F9F1E5] h-[280px] sm:h-[320px] w-full">
+                            <div class="h-full w-full overflow-y-auto rounded-xl bg-white shadow-inner custom-scrollbar-container">
                                 <img 
                                     src="https://res.cloudinary.com/dhe7uziws/image/upload/v1776227288/gqy8fgmobbspgdt1pl1h.png" 
                                     alt="Giao diện E-Brochure" 
@@ -291,10 +298,10 @@
                         <ul class="space-y-3 sm:space-y-4 mb-6 flex-1">
                             <li class="flex items-start gap-2 text-xs sm:text-sm lg:text-base text-gray-700">
                                 <i data-lucide="check-circle-2" class="w-4 h-4 lg:w-5 lg:h-5 text-[#B8860B] mt-0.5 shrink-0"></i>
-                                <span>14 KV cho các CT (Khối / sub - brand):</span>
+                                <span>28 KV, poster cho các CT (Khối / sub - brand):</span>
                             </li>
                             <li class="pl-6 text-xs sm:text-sm lg:text-base text-gray-600 list-disc list-inside">Thi đua nội bộ</li>
-                            <li class="pl-6 text-xs sm:text-sm lg:text-base text-gray-600 list-disc list-inside">Khen thưởng</li>
+                            <li class="pl-6 text-xs sm:text-sm lg:text-base text-gray-600 list-disc list-inside">Khen thưởng ( Chương Trình Nhật Bản)</li>
                             <li class="pl-6 text-xs sm:text-sm lg:text-base text-gray-600 list-disc list-inside">Thông báo</li>
                         </ul>
                         <div class="mt-auto pt-4 bg-[#F9F1E5] rounded-xl p-3 md:p-4 border border-[#B8860B]/30">
@@ -314,29 +321,30 @@
                         </div>
                         <p class="text-xs sm:text-sm lg:text-base font-semibold text-gray-800 mb-3">Thiết kế KV/ Videos, adapt các hạng mục:</p>
                         <ul class="space-y-3 mb-4 flex-1">
-                            <li class="flex items-start gap-2 text-xs sm:text-sm lg:text-base text-gray-600"><i data-lucide="chevron-right" class="w-4 h-4 lg:w-5 lg:h-5 text-[#B8860B] mt-0.5 shrink-0"></i>TAB SALE, E - Gift card</li>
-                            <li class="flex items-start gap-2 text-xs sm:text-sm lg:text-base text-gray-600"><i data-lucide="chevron-right" class="w-4 h-4 lg:w-5 lg:h-5 text-[#B8860B] mt-0.5 shrink-0"></i>CTKM XTT Valentine</li>
+                            <li class="flex items-start gap-2 text-xs sm:text-sm lg:text-base text-gray-600"><i data-lucide="chevron-right" class="w-4 h-4 lg:w-5 lg:h-5 text-[#B8860B] mt-0.5 shrink-0"></i>TAB SALE tháng 3-4</li>
+                            <li class="flex items-start gap-2 text-xs sm:text-sm lg:text-base text-gray-600"><i data-lucide="chevron-right" class="w-4 h-4 lg:w-5 lg:h-5 text-[#B8860B] mt-0.5 shrink-0"></i>Chương Trình 8.3 và SN PNJ 38 năm</li>
                             <li class="flex items-start gap-2 text-xs sm:text-sm lg:text-base text-gray-600"><i data-lucide="chevron-right" class="w-4 h-4 lg:w-5 lg:h-5 text-[#B8860B] mt-0.5 shrink-0"></i>Post livestream</li>
                             <li class="flex items-start gap-2 text-xs sm:text-sm lg:text-base text-gray-600">
                                 <i data-lucide="chevron-right" class="w-4 h-4 lg:w-5 lg:h-5 text-[#B8860B] mt-0.5 shrink-0"></i>
-                                <span>PRODUCT DRIVEN<br/><span class="text-[10px] sm:text-xs lg:text-sm text-gray-500 italic">(TS Kim Tiền, Tín Ngưỡng, TS cưới...)</span></span>
+                                <span>PRODUCT DRIVEN<br/><span class="text-[10px] sm:text-xs lg:text-sm text-gray-500 italic">(TS Ý,  CZ, ECZ, TS cưới...</span></span>
                             </li>
                         </ul>
                     </div>
 
-                    <!-- Box 3: K.KHBL -->
+                    <!-- Box 3: CLHH -->
                     <div class="bg-white rounded-2xl shadow-lg border-t-4 border-[#9A161F] p-5 sm:p-6 lg:p-8 hover:-translate-y-2 transition-transform duration-300 flex flex-col h-full">
                         <div class="flex items-center gap-3 md:gap-4 mb-5 pb-5 border-b border-gray-100">
                             <div class="w-10 h-10 md:w-14 md:h-14 rounded-full bg-[#9A161F] flex items-center justify-center text-white shadow-md shrink-0">
                                 <i data-lucide="star" class="w-5 h-5 md:w-7 md:h-7"></i>
                             </div>
-                            <h3 class="font-extrabold text-[#003366] text-lg md:text-2xl">K.KHBL</h3>
+                            <h3 class="font-extrabold text-[#003366] text-lg md:text-2xl">CLHH</h3>
                         </div>
                         <div class="bg-red-50 p-4 md:p-6 rounded-xl border border-red-100 flex-1 flex flex-col justify-center min-h-[120px] lg:min-h-[150px]">
                             <i data-lucide="award" class="w-8 h-8 md:w-10 md:h-10 text-[#9A161F] mx-auto mb-3 md:mb-4"></i>
                             <p class="text-xs sm:text-sm lg:text-base font-bold text-center text-[#9A161F] leading-relaxed">
-                                BAN TỔ CHỨC CHƯƠNG TRÌNH<br/>
-                                <span class="text-base sm:text-lg lg:text-2xl font-serif-vi block mt-1">"DẤU ẤN 25 XUÂN SON"</span>
+                                Sản xuất nội dung, Thiết kế KV, sản xuất videos các hạng mục:
+<br/>
+                                <span class="text-base sm:text-lg lg:text-2xl font-serif-vi block mt-1">"E- Brochure SN PNJ"</span>
                             </p>
                         </div>
                     </div>
@@ -352,11 +360,11 @@
                         <ul class="space-y-4 sm:space-y-5 flex-1">
                             <li class="flex items-start gap-3 md:gap-4 text-xs sm:text-sm lg:text-base text-gray-700 bg-gray-50 p-4 rounded-xl border border-gray-100">
                                 <i data-lucide="layers" class="w-5 h-5 md:w-6 md:h-6 text-[#B8860B] shrink-0 mt-0.5"></i>
-                                <span>Adapt <strong>131 hạng mục</strong> CT khai thác KHM tại <strong>53 đối tác</strong></span>
+                                <span>Adapt <strong> trên 30 hạng mục</strong> CT 8.3 </strong> và  SN PNJ 38 năm </strong>: standee Gitfzone, viettel,...
                             </li>
                             <li class="flex items-start gap-3 md:gap-4 text-xs sm:text-sm lg:text-base text-gray-700 bg-gray-50 p-4 rounded-xl border border-gray-100">
                                 <i data-lucide="image" class="w-5 h-5 md:w-6 md:h-6 text-[#B8860B] shrink-0 mt-0.5"></i>
-                                <span>Design banner, Voucher CT Xuân Valentine Thần Tài thông qua ZMP</span>
+                                <span>Design banner, Voucher CT 8.3 và SN PNJ 38 Năm thông qua ZMP</span>
                             </li>
                         </ul>
                     </div>
@@ -367,12 +375,13 @@
                             <div class="w-10 h-10 md:w-14 md:h-14 rounded-full bg-[#003366] flex items-center justify-center text-white shadow-md shrink-0">
                                 <i data-lucide="shopping-bag" class="w-5 h-5 md:w-7 md:h-7"></i>
                             </div>
-                            <h3 class="font-extrabold text-[#003366] text-lg md:text-2xl">RETAIL</h3>
+                            <h3 class="font-extrabold text-[#003366] text-lg md:text-2xl">RETAIL MKT</h3>
                         </div>
                         <div class="flex items-start gap-3 md:gap-4 text-xs sm:text-sm lg:text-base text-gray-700 bg-gray-50 p-5 lg:p-6 rounded-xl border border-gray-100 flex-1">
                             <i data-lucide="printer" class="w-6 h-6 lg:w-8 lg:h-8 text-[#B8860B] shrink-0 mt-1"></i>
                             <p class="leading-relaxed text-balance">
-                                Adapt <strong class="text-[#9A161F] text-sm md:text-base lg:text-lg">110 hạng mục</strong> POSM in ấn cho CT Xuân Valentine Thần Tài.
+                                Adapt <strong class="text-[#9A161F] text-sm md:text-base lg:text-lg"> 60 hạng mục</strong> CT SN PNJ từ
+master KV cho các sub- brand.
                             </p>
                         </div>
                     </div>
@@ -387,10 +396,13 @@
                         </div>
                         <ul class="space-y-4 sm:space-y-6 flex-1">
                             <li class="text-xs sm:text-sm lg:text-base text-gray-700 border-l-4 border-[#B8860B] pl-4">
-                                <strong class="text-[#003366]">CX:</strong> Hỗ trợ chụp ảnh sản phẩm (Quà, material,...), chụp ảnh event, video recap cho CT Xuân Thần Tài.
+                                <strong class="text-[#003366]">CX:</strong> Thiết kế 23 thông báo, chụp ảnh,  video recap
+event, workshop 8.3 
                             </li>
                             <li class="text-xs sm:text-sm lg:text-base text-gray-700 border-l-4 border-[#9A161F] pl-4">
-                                <strong class="text-[#9A161F]">CS:</strong> Thiết kế thông báo, standee cho chính sách giá bán, đặt cọc và nghị định 232.
+                                <strong class="text-[#9A161F]">CS:</strong> CS: Thiết kế thông báo, standee cho chính sách
+giá bán, thu đổi, ...
+
                             </li>
                         </ul>
                     </div>
